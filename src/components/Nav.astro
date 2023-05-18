@@ -6,7 +6,9 @@
       <img src="logo.webp" alt="Logo">
     </div>
     <ul>
-      <li>NYHEDER</li>
+      <li>
+        <a href="/nyheder.astro">NYHEDER</a>
+      </li>
       <li>MÆND</li>
       <li>KVINDER</li>
       <li>ACCESSORIES</li>
@@ -56,11 +58,17 @@
     }
 
     .navbar ul li {
-      margin-left: 20px;
+      margin-left: var(--spaceCardInlineLg);
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: var(--primaryHvid)
     }
 
     .navbar ul li:hover {
       cursor: pointer;
+      text-decoration: underline;
     }
 
     .dropdown {
@@ -133,7 +141,6 @@
   </style>
 
 
- <!-- Tilføjet JavaScript til at håndtere klik på ikonerne -->
  <script>
     // JavaScript-kode til at håndtere klik på ikonerne
     function handleCartClick() {
