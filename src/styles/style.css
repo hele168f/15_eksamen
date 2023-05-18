@@ -1,0 +1,9 @@
+/* font-family: 'Anonymous Pro', monospace;
+font-family: 'Black Ops One', cursive;
+font-family: 'Open Sans', sans-serif; */
+
+body {
+    background-color: var(--bgPrimary);
+    color: var(--textPrimary);
+    font-family: 'Open Sans', sans-serif;
+}

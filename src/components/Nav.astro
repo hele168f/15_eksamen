@@ -1,3 +1,161 @@
 ---
 
 ---
+<nav class="navbar">
+    <div class="navbar-logo">
+      <img src="logo.webp" alt="Logo">
+    </div>
+    <ul>
+      <li>NYHEDER</li>
+      <li>MÆND</li>
+      <li>KVINDER</li>
+      <li>ACCESSORIES</li>
+      <li class="dropdown">
+        <span>OM BIRKE</span>
+        <div class="dropdown-content">
+          <p>Jægersoldat</p>
+        </div>
+      </li>
+      <div class="navbar-icons">
+      <img src="search.png" alt="Søg" onclick="handleSearcgClick()">
+      <img src="heart.png" alt="Hjerte" onclick="handleHeartClick()">
+      <img src="cart.png" alt="Kurv" onclick="handleCartClick()">
+    </div>
+    </ul>
+    
+    <div class="navbar-burger">&#9776;</div>
+  </nav>
+
+<style>
+    /* CSS-styling */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--spacingLg); 
+    }
+
+    .navbar-logo {
+      margin-right: 20px;
+    }
+
+    .navbar-logo img {
+      height: 100%;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+    }
+
+    .navbar ul li:hover {
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+      min-width: 200px;
+      padding: 10px;
+      color: white;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .navbar-icons {
+      display: flex;
+      align-items: center;
+      gap: var(--spaceCardInlineSm);
+      margin-left: var(--spaceCardInlineXl);
+    }
+
+    .navbar-icons img {
+      height: 25px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    /* Mediaforespørgsel for mobilvisning */
+
+    @media (min-width:600px) {
+    .navbar-burger {
+        display: none;
+      }
+
+   
+    }
+    @media (max-width: 600px) {
+    .navbar ul {
+        display: none;
+      }
+      .navbar-icons {
+        display: none;
+    }
+
+      .navbar ul.active {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navbar ul li {
+        margin: 10px 0;
+      }
+
+      .navbar-burger {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 40px;
+        margin-right: 20px;
+      }
+
+      /* Skjul burgermenuen i fuldskærm */
+      
+    }
+  </style>
+
+
+ <!-- Tilføjet JavaScript til at håndtere klik på ikonerne -->
+ <script>
+    // JavaScript-kode til at håndtere klik på ikonerne
+    function handleCartClick() {
+      // Logik for kurv-ikonets klik
+      console.log("Kurv blev klikket!");
+    }
+
+    function handleHeartClick() {
+      // Logik for hjerte-ikonets klik
+      console.log("Hjerte blev klikket!");
+    }
+
+    function handleSearchClick() {
+      // Logik for søge-ikonets klik
+      console.log("Søg blev klikket!");
+    }
+
+    // JavaScript-kode til at håndtere burgermenuen
+    const navbarBurger = document.querySelector('.navbar-burger');
+    const navbarMenu = document.querySelector('.navbar ul');
+
+    navbarBurger.addEventListener('click', function() {
+      navbarMenu.classList.toggle('active');
+    });
+</script>
