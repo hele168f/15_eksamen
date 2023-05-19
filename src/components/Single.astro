@@ -31,18 +31,56 @@ const {produktbeskrivelse, pris} = Astro.props;
         <input type="text" class="quantity-input" value="1">
         <button class="plus-button">+</button>
       </div>
-      <button class="add-to-cart-button">Læg i kurv</button>
+      <section>
+        <div>
+            <button class="add-to-cart-button">Læg i kurv</button>
+        <button class="size-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+            <path d="M20.84 4.58a5.5 5.5 0 0 0-7.78 0L12 5.94l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.49l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg>
+          </button>
+        </div>
+        
+      <div class="infos">
+        <p>Fri Levering</p>
+        <p>30 dages returret</p>
+        <p>Levering 2-3 dage</p>
+      </div>
+      </section>
+      
       <div class="dropdown">
         <h4 class="dropdown-title">Beskrivelse og pasform <span class="arrow-down">&#9662;</span></h4>
         <div class="dropdown-content">
           <p>Krafla takes its name from one of Iceland's most powerful volcanoes. This elegant long-length vest is designed to provide added warmth for those who battle the elements in their everyday commute. Boxy fit silhouette with a clean and simple design. Lightweight recycled down insulation with 700 fill power ensures enduring warmth without adding any bulk. The outer shell is made from 100% recycled fibers, colored with natural dyes. Two zipped front pockets and one inner zipped chest pocket. Male model is 189 cm / 6' 2" tall and wearing size M/L.</p>
         </div>
       </div>
+
+      <div class="dropdown">
+        <h4 class="dropdown-title">Detaljer og pasning<span class="arrow-down">&#9662;</span></h4>
+        <div class="dropdown-content">
+          <p>Krafla takes its name from one of Iceland's most powerful volcanoes. This elegant long-length vest is designed to provide added warmth for those who battle the elements in their everyday commute. Boxy fit silhouette with a clean and simple design. Lightweight recycled down insulation with 700 fill power ensures enduring warmth without adding any bulk. The outer shell is made from 100% recycled fibers, colored with natural dyes. Two zipped front pockets and one inner zipped chest pocket. Male model is 189 cm / 6' 2" tall and wearing size M/L.</p>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <h4 class="dropdown-title">Levering og returnering <span class="arrow-down">&#9662;</span></h4>
+        <div class="dropdown-content">
+          <p>Krafla takes its name from one of Iceland's most powerful volcanoes. This elegant long-length vest is designed to provide added warmth for those who battle the elements in their everyday commute. Boxy fit silhouette with a clean and simple design. Lightweight recycled down insulation with 700 fill power ensures enduring warmth without adding any bulk. The outer shell is made from 100% recycled fibers, colored with natural dyes. Two zipped front pockets and one inner zipped chest pocket. Male model is 189 cm / 6' 2" tall and wearing size M/L.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 
 
   <style>
+
+.plus-button {
+    cursor: pointer;
+}
+
+.minus-button {
+    cursor: pointer;
+}
 .singleview-container {
   display: flex;
   margin: 32px;
@@ -58,6 +96,7 @@ const {produktbeskrivelse, pris} = Astro.props;
 
 .size-guide {
     margin-top: 0;
+    cursor: pointer;
 }
 
 .image-container img {
@@ -68,6 +107,7 @@ const {produktbeskrivelse, pris} = Astro.props;
 .content-container {
   flex: 2;
   padding-inline: 32px;
+  padding-right: 128px;
 }
 
 .title {
@@ -104,6 +144,7 @@ const {produktbeskrivelse, pris} = Astro.props;
   color: white;
   height: 40px;
   width: 40px;
+  cursor: pointer;
 }
 
 .quantity-container {
@@ -122,7 +163,7 @@ const {produktbeskrivelse, pris} = Astro.props;
 
 .add-to-cart-button {
   margin-top: 20px;
-  padding: 12px 128px;
+  padding: 12px 256px;
   background-color: var(--yellowGul300);
   color: black;
   border: none;
@@ -161,6 +202,12 @@ const {produktbeskrivelse, pris} = Astro.props;
   display: block;
 }
 
+.infos {
+    display: flex;
+    justify-content:space-around;
+    gap:8px;
+}
+
   </style>
 
   <script>
@@ -187,13 +234,14 @@ function increaseQuantity() {
 }
 
 
-// Tilføj eventlytter til dropdown-titlen
-const dropdownTitle = document.querySelector('.dropdown-title');
-dropdownTitle.addEventListener('click', toggleDropdown);
+// Tilføj eventlyttere til dropdown-titler
+const dropdownTitles = document.querySelectorAll('.dropdown-title');
+dropdownTitles.forEach((title) => {
+  title.addEventListener('click', toggleDropdown);
+});
 
 function toggleDropdown() {
-  const dropdown = document.querySelector('.dropdown');
+  const dropdown = this.closest('.dropdown');
   dropdown.classList.toggle('active');
 }
-
   </script>
