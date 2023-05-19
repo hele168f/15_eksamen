@@ -3,6 +3,7 @@ import"../styles/style.css";
 import"../styles/global.css";
 import Nav from "../components/Nav.astro" ;
 import Card from "../components/Card.astro" ;
+import Single from "../components/Single.astro";
 ---
 
 <html lang="en">
@@ -19,6 +20,10 @@ import Card from "../components/Card.astro" ;
 	<body>
 		<Nav />
 		<!-- <Card produktbeskrivelse="Produktbeskrivelse" pris="DKK 199,-"/> -->
+		<Card 
+		produktbeskrivelse="T-shirt"
+		pris="DKK 199,-"
+		/>
 		
 	</body>
 </html>

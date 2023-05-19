@@ -1,10 +1,36 @@
 ---
 const {produktbeskrivelse, pris} = Astro.props;
 ---
-<article>
+<article class="card">
+    <img src="https://via.placeholder.com/300x500" alt="Billede" width="300" height="500">
     <h3>{produktbeskrivelse}</h3>
-    <h4>{pris}</h4>
+    <p>{pris}</p>
+   
 </article>
-{}
 
-<style></style>
+<style>
+    /* CSS-styling */
+    .card {
+      width: 300px;
+      border-radius: 5px;
+      font-family: var(--fontFamiliesFontMono);
+      font-size: 1rem;
+      
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .card h3 {
+      margin-top: var(--spaceCardStackMd);
+      margin-bottom: var(--spaceCardStackNone);
+    }
+
+    .card p {
+      font-weight: bold;
+      margin-top: var(--spaceCardStackSm);
+      margin-bottom: var(--spaceCardStackMd);
+    }
+  </style>

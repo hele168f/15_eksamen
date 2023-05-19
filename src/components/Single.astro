@@ -1,0 +1,199 @@
+---
+const {produktbeskrivelse, pris} = Astro.props;
+---
+
+<div class="singleview-container">
+    <div class="image-container">
+      <img src="https://via.placeholder.com/300x500" alt="Produktbillede">
+    </div>
+    <div class="content-container">
+      <h2 class="title">Produkttitel</h2>
+      <p class="description">Produktbeskrivelse</p>
+      <p class="price">Pris: $XX</p>
+      <hr>
+      <div class="size-container">
+        <p class="size-info">Størrelse:</p>
+        <p class="size-guide">Størrelsesguide</p>
+      </div>
+      
+      <div class="size-buttons">
+        <button class="size-button">XS</button>
+        <button class="size-button">S</button>
+        <button class="size-button">M</button>
+        <button class="size-button">L</button>
+        <button class="size-button">XL</button>
+      </div>
+
+      <p>Antal:</p>
+      <div class="quantity-container">
+        
+        <button class="minus-button">-</button>
+        <input type="text" class="quantity-input" value="1">
+        <button class="plus-button">+</button>
+      </div>
+      <button class="add-to-cart-button">Læg i kurv</button>
+      <div class="dropdown">
+        <h4 class="dropdown-title">Beskrivelse og pasform <span class="arrow-down">&#9662;</span></h4>
+        <div class="dropdown-content">
+          <p>Krafla takes its name from one of Iceland's most powerful volcanoes. This elegant long-length vest is designed to provide added warmth for those who battle the elements in their everyday commute. Boxy fit silhouette with a clean and simple design. Lightweight recycled down insulation with 700 fill power ensures enduring warmth without adding any bulk. The outer shell is made from 100% recycled fibers, colored with natural dyes. Two zipped front pockets and one inner zipped chest pocket. Male model is 189 cm / 6' 2" tall and wearing size M/L.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <style>
+.singleview-container {
+  display: flex;
+  margin: 32px;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.size-info{
+    margin-top: 0;
+}
+
+.size-guide {
+    margin-top: 0;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.content-container {
+  flex: 2;
+  padding-inline: 32px;
+}
+
+.title {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.price {
+  margin-top: 10px;
+}
+
+
+
+.size-container {
+ display: flex;
+ justify-content: space-between;
+
+}
+
+.size-buttons {
+  margin-top: 16px;
+  
+}
+
+.size-button {
+  margin-right: 8px;
+  border-color: var(--yellowGul300);
+  background-color: black;
+  color: white;
+  height: 40px;
+  width: 40px;
+}
+
+.quantity-container {
+  margin-top: 20px;
+}
+
+.quantity-container p {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.quantity-input {
+  width: 40px;
+  text-align: center;
+}
+
+.add-to-cart-button {
+  margin-top: 20px;
+  padding: 12px 128px;
+  background-color: var(--yellowGul300);
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.arrow-down {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+  display: none;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #000000;
+ 
+}
+
+.dropdown-content p {
+  margin: 0;
+}
+
+.dropdown.active .arrow-down {
+  transform: rotate(180deg);
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+  </style>
+
+  <script>
+    // Tilføj eventlyttere til plus- og minus-knapper
+const minusButton = document.querySelector('.minus-button');
+const plusButton = document.querySelector('.plus-button');
+const quantityInput = document.querySelector('.quantity-input');
+
+minusButton.addEventListener('click', decreaseQuantity);
+plusButton.addEventListener('click', increaseQuantity);
+
+function decreaseQuantity() {
+  let quantity = parseInt(quantityInput.value);
+  if (quantity > 1) {
+    quantity--;
+    quantityInput.value = quantity;
+  }
+}
+
+function increaseQuantity() {
+  let quantity = parseInt(quantityInput.value);
+  quantity++;
+  quantityInput.value = quantity;
+}
+
+
+// Tilføj eventlytter til dropdown-titlen
+const dropdownTitle = document.querySelector('.dropdown-title');
+dropdownTitle.addEventListener('click', toggleDropdown);
+
+function toggleDropdown() {
+  const dropdown = document.querySelector('.dropdown');
+  dropdown.classList.toggle('active');
+}
+
+  </script>
