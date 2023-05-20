@@ -1,7 +1,7 @@
 ---
 const {tekst} = Astro.props;
 ---
-<button class="primær_button">{tekst}</button>
+<button id="myButton" class="primær_button">{tekst}</button>
 
 
 <style>
@@ -12,6 +12,31 @@ const {tekst} = Astro.props;
         background-color: var(--yellowGul300);
         border: none;
         font-family: var(--blackOpsOneText6xlFontFamily);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    .primær_button.grøn {
+        background-color: var(--actionPrimaryHover);
+    }
+
 </style>
 
+<script>
+    var button = document.getElementById("myButton");
+    var isToggled = false;
+
+    button.addEventListener("click", function () {
+        if (isToggled) {
+            button.classList.remove("grøn");
+            button.textContent = "LÆG I KURV";
+            isToggled = false;
+        } else {
+            button.classList.add("grøn");
+            button.textContent = "TJEK DIN KURV";
+            isToggled = true;
+        }
+    });
+</script>
