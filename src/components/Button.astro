@@ -1,30 +1,53 @@
 ---
-const {tekst} = Astro.props;
----
-<button id="myButton" class="primær_button">{tekst}</button>
+/*const {tekst} = Astro.props;*/
+const { variant, href } = Astro.props;
 
+const Tag = href ? "a" : "button";
+
+// let Tag = "button";
+
+// if (href) {
+//   Tag = "a";
+// }
+---
+
+
+
+<Tag data-variant={variant} {href}>
+  <slot />
+</Tag>
 
 <style>
-    .primær_button {
+    a, button {
         padding-inline: 32px;
         padding-block: 16px;
         color:black;
-        background-color: var(--yellowGul300);
         border: none;
+        border-radius: 2%;
         font-family: var(--blackOpsOneText6xlFontFamily);
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
+        max-width: fit-content;
+        text-decoration: none;
     }
 
-    .primær_button.grøn {
-        background-color: var(--actionPrimaryHover);
+     [data-variant="primary"] {
+     background-color: var(--actionPrimary);
+     background-color: var(--actionPrimaryHover);
+     color:black
+    }
+    [data-variant="secondary"] {
+     background-color: var(--actionPrimary);
+     background-color: var(--actionPrimaryHover);
+     color:black
     }
 
 </style>
 
 <script>
+    /*
     var button = document.getElementById("myButton");
     var isToggled = false;
 
@@ -38,5 +61,5 @@ const {tekst} = Astro.props;
             button.textContent = "TJEK DIN KURV";
             isToggled = true;
         }
-    });
+    }); */
 </script>

@@ -4,6 +4,7 @@ import"../styles/global.css";
 import Nav from "../components/Nav.astro" ;
 import Card from "../components/Card.astro" ;
 import Button from "../components/Button.astro" ;
+import Footer from "../components/Footer.astro" ;
 ---
 
 <html lang="en">
@@ -18,14 +19,23 @@ import Button from "../components/Button.astro" ;
 		<title>Birke 1972</title>
 	</head>
 	<body>
+		<main>
+
 		<Nav />
 		<!-- <Card produktbeskrivelse="Produktbeskrivelse" pris="DKK 199,-"/> -->
 		<Card 
 		produktbeskrivelse="T-shirt"
 		pris="DKK 199,-"
 		/>
-
+		<Button href="/" variant="primary">LÆG I KURV</Button>
+		<Button href="/" variant="secondary">LÆG I KURV</Button>
+		<Footer></Footer>
+       </main>
 	
 		
 	</body>
 </html>
+
+<style>
+
+</style>
