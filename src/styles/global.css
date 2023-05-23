@@ -1,16 +1,16 @@
 :root {
     /* farver */
-    --blueBl100: #89bae9;
-    --blueBl200: #5199de;
-    --blueBl300: #1877d3;
-    --blueBl400: #125aa0;
-    --blueBl500: #0d3e6e;
-    --blueBl600: #0b3964;
-    --greenGrN100: #90bfa5;
-    --greenGrN200: #5da27c;
-    --greenGrN300: #2c8554;
-    --greenGrN400: #22653f;
-    --greenGrN500: #17462c;
+    --blueBlue100: #89bae9;
+    --blueBlue200: #5199de;
+    --blueBlue300: #1877d3;
+    --blueBlue400: #125aa0;
+    --blueBlue500: #0d3e6e;
+    --blueBlue600: #0b3964;
+    --greenGreen100: #90bfa5;
+    --greenGreen200: #5da27c;
+    --greenGreen300: #2c8554;
+    --greenGreen400: #22653f;
+    --greenGreen500: #17462c;
     --greenGrN600: #153e27;
     --yellowGul100: #ffc870;
     --yellowGul200: #fdb647;
@@ -18,14 +18,21 @@
     --yellowGul400: #d0850e;
     --yellowGul500: #965f08;
     --yellowGul600: #4d3106;
-    --redRD100: #ff9999;
-    --redRD200: #ff5c5c;
-    --redRD300: #ed0000;
-    --redRD400: #b60000;
-    --redRD500: #810000;
-    --redRD600: #760000;
-    --primaryHvid: #ffffff;
-    --primarySort: #000000;
+    --redRed100: #ff9999;
+    --redRed200: #ff5c5c;
+    --redRed300: #ed0000;
+    --redRed400: #b60000;
+    --redRed500: #810000;
+    --redRed600: #760000;
+    --primaryHvid: #f2f2f2;
+    --primarySort: #0F0F0F;
+    --textPrimary: #f2f2f2; /* Primære farve for text */
+    --textInverse: #0F0F0F; /* Tekst på billedereller inverse bg */
+    --textHighlight: #f39c12;
+    --bgPrimary: #0F0F0F; /* Primære farve til bg */
+    --actionPrimary: #f39c12; /* Primære knappers bg */
+    --actionPrimaryHover: #fdb647; /* primære knappers bg i hover */
+    --actionPrimaryFocus: #ffc870;
 
     /* font */
     --fontFamiliesFontSans: Open Sans;
@@ -56,7 +63,7 @@
     --fontSize5xl: 61.04px;
     --fontSize6xl: 76.29px;
 
-    
+
     --letterSpacing0: 0em;
     --paragraphSpacing0: 0;
     --openSansTextXsFontFamily: Open Sans;
