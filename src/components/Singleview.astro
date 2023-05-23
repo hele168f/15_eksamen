@@ -1,8 +1,341 @@
 ---
 const {produktbeskrivelse, pris} = Astro.props;
+import Card from "../components/Card.astro" ;
+import Button from "../components/Button.astro";
 ---
 
-<div class="singleview-container">
+<section >
+  <div class="container">
+    <div class="grid_1">
+    <img src="https://via.placeholder.com/300x500" alt="Billede" width="300" height="500">
+  </div>
+  <div class="grid_2">
+    <div>
+      <h2 class="title">PRODUKTTITEL</h2>
+        <p class="description">Produktbeskrivelse</p>
+        <p class="price">Pris: $XX</p>
+    </div>
+  
+    <div>
+      <div class="size-container">
+        <p class="size-info">Størrelse:</p>
+        <p class="size-guide">Størrelsesguide</p>
+      </div>
+      
+      <div class="size-buttons">
+        <button class="size-button">XS</button>
+          <button class="size-button">S</button>
+          <button class="size-button">M</button>
+          <button class="size-button">L</button>
+          <button class="size-button">XL</button>
+      </div>
+    </div>
+  
+    <div>
+      <p>Antal</p>
+      <div class="quantity-container">
+          
+        <button class="minus-button">-</button>
+        <input type="text" class="quantity-input" value="1">
+        <button class="plus-button">+</button>
+      </div>
+    </div>
+  
+    <div class="buttons">
+      <Button href="/" variant="primary">LÆG I KURV</Button>
+      <button>HJERTE</button>
+    </div>
+  
+    <div class="infos">
+      <div class="info">
+        <p> ✔ 30 DAGES RETURRET</p>
+      </div>
+  
+      <div class="info">
+        <p> ✔ ALTID FRI FRAGT</p>
+      </div>
+  
+      <div class="info">
+        <p>✔ LEVERING 2-3 HVERDAGE</p>
+      </div>
+    </div>
+  
+    <div class="dropdown">
+      <h4 class="dropdown-title">Beskrivelse og pasform <span class="arrow-down">&#9662;</span></h4>
+      <div class="dropdown-content">
+        <p>Krafla takes its name from one of Iceland's most powerful volcanoes. This elegant long-length vest is designed to provide added warmth for those who battle the elements in their everyday commute. Boxy fit silhouette with a clean and simple design. Lightweight recycled down insulation with 700 fill power ensures enduring warmth without adding any bulk. The outer shell is made from 100% recycled fibers, colored with natural dyes. Two zipped front pockets and one inner zipped chest pocket. Male model is 189 cm / 6' 2" tall and wearing size M/L.</p>
+      </div>
+    </div>
+  
+    <div class="dropdown">
+      <h4 class="dropdown-title">Detaljer og pasning<span class="arrow-down">&#9662;</span></h4>
+      <div class="dropdown-content">
+        <p>Krafla takes its name from one of Iceland's most powerful volcanoes. This elegant long-length vest is designed to provide added warmth for those who battle the elements in their everyday commute. Boxy fit silhouette with a clean and simple design. Lightweight recycled down insulation with 700 fill power ensures enduring warmth without adding any bulk. The outer shell is made from 100% recycled fibers, colored with natural dyes. Two zipped front pockets and one inner zipped chest pocket. Male model is 189 cm / 6' 2" tall and wearing size M/L.</p>
+      </div>
+    </div>
+  
+    <div>
+      <div class="anmeldelser">
+        <p>Anmeldelser (33)</p>
+      <img src="https://via.placeholder.com/128x30" alt="Billede" width="128" height="30">
+      </div>
+      <div class="anmeldelser_scale">
+        <!-- <img src="https://via.placeholder.com/636x150" alt="Billede" width="636" height="150"> -->
+      </div>
+      <Button href="/" variant="primary">LÆS ALLE ANMELDELSER</Button>
+    </div>
+  <div>
+  </div>
+  
+</div>
+  </div>
+  
+  
+<h2>SE ANDRE PRODUKTER</h2>
+  <div class="card_komponent">
+    <Card 
+  produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
+  pris="DKK 495,-"
+		    />
+
+  <Card 
+  produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
+  pris="DKK 495,-"
+		    />
+  <Card 
+  produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
+  pris="DKK 495,-"
+    />  
+  </div>
+</section>
+
+
+<style>
+  .buttons {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .anmeldelser {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+    margin-bottom: 8px;
+
+  }
+
+  .anmeldelser_scale {
+    margin-bottom: 16px;
+  }
+
+  .anmeldelser p {
+    font-family: var(--anonymousProText2xlFontFamily);
+    font-size: var(--fontSizeLg);
+    font-weight: bold;
+  }
+  .card_komponent {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+           width:100%;
+           max-width:1000px;
+           margin:64px auto;
+           gap: 32px;
+        }
+.container {
+  /* display: flex;
+  flex-direction: row; */
+  place-self: center;
+  width: 100%;
+    max-width: 1000px;
+    margin: 64px auto;
+}
+
+
+
+@media (min-width: 1200px) {
+  .container {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 64px auto;
+    gap: 64px;
+  }
+
+  .grid_2 {
+    width: 700px;
+  }
+}
+
+
+.size-container {
+ display: flex;
+ justify-content: space-between;
+ border-top:  1px solid var(--yellowGul300);
+ padding-top: 8px;
+
+}
+
+.size-buttons {
+  margin-top: 16px;
+  margin-bottom: 64px;
+  
+}
+
+.size-button {
+  margin-right: 8px;
+  border-color: var(--yellowGul300);
+  background-color: black;
+  color: white;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.size-info{
+    margin-top: 0;
+    font-family: var(--fontFamiliesFontSans);
+    font-family: var(--openSansTextBaseFontFamily);
+    font-size: var(--openSansTextBaseFontSize);
+    font-weight: bold;
+}
+
+.size-guide {
+    margin-top: 0;
+    cursor: pointer;
+    font-family: var(--openSansTextBaseFontFamily);
+    font-size: 12.8px;
+    font-weight: bold;
+    
+}
+
+.infos {
+    display: flex;
+    justify-content:space-between;
+    gap:8px;
+    margin-bottom: 64px;
+    font-size: 12.8px;
+}
+
+.info {
+  display:flex;
+}
+
+.quantity-container {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.quantity-container p {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.quantity-input {
+  width: 40px;
+  text-align: center;
+}
+.dropdown-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 32px;
+  font-family: var(--anonymousProText2xlFontFamily);
+  font-size: var(--fontSizeLg)
+}
+
+.arrow-down {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+  display: none;
+  margin-top: 10px;
+  background-color: #000000;
+ 
+}
+
+.dropdown-content p {
+  margin-bottom: 32px;
+}
+
+.dropdown.active .arrow-down {
+  transform: rotate(180deg);
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+.title {
+  margin-top: 0;
+  font-family: var(--anonymousProText2xlFontFamily);
+  font-size: var(--anonymousProText2xlFontSize);
+  font-weight: var(--anonymousProText2xlFontWeight)
+  t
+}
+
+.description {
+  margin-top: 8px;
+  font-family: var(--anonymousProText2xlFontFamily);
+  font-size: var(--anonymousProTextXlFontSize);
+  font-weight: var(--anonymousProText2xlFontWeight)
+}
+
+.price {
+  margin-top: 8px;
+  margin-bottom: 64px;
+  font-family: var(--anonymousProText2xlFontFamily);
+  font-size: var(--anonymousProTextXlFontSize);
+  font-weight: var(--anonymousProText2xlFontWeight)
+}
+
+</style>
+
+<script>
+  // Tilføj eventlyttere til plus- og minus-knapper
+const minusButton = document.querySelector('.minus-button');
+const plusButton = document.querySelector('.plus-button');
+const quantityInput = document.querySelector('.quantity-input');
+
+minusButton.addEventListener('click', decreaseQuantity);
+plusButton.addEventListener('click', increaseQuantity);
+
+function decreaseQuantity() {
+let quantity = parseInt(quantityInput.value);
+if (quantity > 1) {
+  quantity--;
+  quantityInput.value = quantity;
+}
+}
+
+function increaseQuantity() {
+let quantity = parseInt(quantityInput.value);
+quantity++;
+
+quantityInput.value = quantity;
+}
+
+
+// Tilføj eventlyttere til dropdown-titler
+const dropdownTitles = document.querySelectorAll('.dropdown-title');
+dropdownTitles.forEach((title) => {
+title.addEventListener('click', toggleDropdown);
+});
+
+function toggleDropdown() {
+const dropdown = this.closest('.dropdown');
+dropdown.classList.toggle('active');
+}
+</script>
+
+
+
+
+<!-- <div class="singleview-container">
     <div class="image-container">
       <img src="https://via.placeholder.com/300x500" alt="Produktbillede">
     </div>
@@ -209,7 +542,7 @@ const {produktbeskrivelse, pris} = Astro.props;
 }
 
   </style>
-<!-- 
+
   <script>
     // Tilføj eventlyttere til plus- og minus-knapper
 const minusButton = document.querySelector('.minus-button');

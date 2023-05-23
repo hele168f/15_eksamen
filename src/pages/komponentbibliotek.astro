@@ -20,11 +20,11 @@ import Button from "../components/Button.astro";
 	</head>
 	<body>
         <main>
-        <h1>KOMPONENTBIBLIOTEK</h1>
 
-        <h2>Card komponent</h2>
+        
+        <h2>Card Component</h2>
 
-        <section class="card_komponent">
+        <div class="card_komponent">
            <Card 
             produktbeskrivelse="T-SHIRT MED MILITÆR PRINT"
             pris="DKK 199,-"
@@ -39,18 +39,20 @@ import Button from "../components/Button.astro";
             produktbeskrivelse="LØBESHORTS"
             pris="DKK 395,-"
 		    /> 
-        </section>
+        </div>
 
-        <h2>Single view komponent</h2>
+         <h2>Single view komponent</h2>
         <section>
             <Singleview />
-        </section>
+        </section> 
 
-        <h2>Button komponent</h2>
+        <h2>Navigation komponent</h2>
         <section>
-            <Button 
-            tekst="LÆG I KURV"/>
-        </section>
+            <Nav />
+        </section> 
+
+
+       
         </main>
 
         
@@ -61,21 +63,21 @@ import Button from "../components/Button.astro";
 </html>
 
 <style>
-    main {
-        margin-inline: 32px;
-    }
-    h1{
-        text-align: center;
-    }
 
-    .card_komponent {
-        display: flex;
-        margin: var(--spaceCardInlineLg);
-        gap: var(--spaceCardInlineLg);
-        justify-content: center;
-        align-items: center;
-       
-        
-        
+    h2 {
+        place-self: center;
     }
-</style>
+    
+    .card_komponent {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+           width:100%;
+           max-width:1000px;
+           margin:64px auto;
+           gap: 32px;
+        }
+
+
+
+    
+</style> 
