@@ -20,6 +20,44 @@ import Footer from "../components/Footer.astro";
 		<title>Birke 1972</title>
 	</head>
 	<body>
+		<header>
+			<Nav> 
+				<div class="navbar">
+					<div class="navbar-logo">
+					  <a href="/"> <img src="logo.webp" > </a>
+					
+					</div>
+					<ul>
+					  <li>
+						<a href="/nyheder">NYHEDER</a>
+					  </li>
+					  <li>
+						<a href="/maend">MÆND</a>
+					  </li>
+					  <li>
+						<a href="/kvinder" >KVINDER</a>
+					  </li>
+					  <li>
+						<a href="/accessories" class="active">ACCESSORIES</a>
+					  </li>
+					
+					  <li class="dropdown">
+						<span><a href="/om">OM BIRKE</a></span>
+						<div class="dropdown-content">
+							<a href="/soldat">JÆGERSOLDAT</a>
+						</div>
+					  </li>
+					  <div class="navbar-icons">
+					  <img src="search.png" alt="Søg" onclick="handleSearcgClick()">
+					  <img src="heart.png" alt="Hjerte" onclick="handleHeartClick()">
+					  <img src="cart.png" alt="Kurv" onclick="handleCartClick()">
+					</div>
+					</ul>
+					
+					<div class="navbar-burger">&#9776;</div>
+				</div>
+			</Nav>
+		</header>
 		<main>
 			<Nav />
 			<Breadcrumb>

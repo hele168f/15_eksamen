@@ -49,3 +49,121 @@ h1{
 	font-size: 40px;
 
 }
+
+
+
+
+/* Navigationsmenuen */
+.navbar {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 16px; 
+  padding-inline: 0px !important;
+}
+
+.navbar-logo {
+  margin-right: 20px;
+}
+
+.navbar-logo img {
+  height: 100%;
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: var(--spaceCardInlineLg);
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: var(--primaryHvid)
+}
+
+.navbar ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 200px;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--spaceCardInlineSm);
+  margin-left: var(--spaceCardInlineXl);
+}
+
+.navbar-icons img {
+  height: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.active {
+  text-decoration: underline !important;
+}
+
+/* Mediaforespørgsel for mobilvisning */
+
+@media (min-width:600px) {
+.navbar-burger {
+    display: none;
+  }
+
+
+}
+@media (max-width: 600px) {
+.navbar ul {
+    display: none;
+  }
+  .navbar-icons {
+    display: none;
+}
+
+  .navbar ul.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .navbar-burger {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 40px;
+    margin-right: 20px;
+  }
+}
+
+
+main {
+  margin-inline: 10%;
+}
+header {
+  margin-inline: 10%;
+}
