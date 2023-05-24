@@ -3,6 +3,9 @@ import"../styles/style.css";
 import"../styles/global.css";
 import Nav from "../components/Nav.astro" ;
 import Card from "../components/Card.astro" ;
+import Breadcrumb from "../components/Breadcrumb.astro";
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -17,7 +20,66 @@ import Card from "../components/Card.astro" ;
 		<title>Birke 1972</title>
 	</head>
 	<body>
-		<Nav />
+		<main>
+			<Nav />
+		<Breadcrumb 
+		forrige="Forside"
+		nuvaerendePage="Accessories"
+		/>
+
+		<section class="page-width">
+			<Button href="/" variant="primary">FILTRER</Button>
+			<div class="card_komponent">
+				<Card 
+				imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/20899837-A5E7-4E76-B2F2-EFF97FFB7B44_720x.jpg?v=1631736529"
+				 produktbeskrivelse="2-LAYER INFILTRATOR SUPER STRETCH 7 - BLACK"
+				 pris="DKK 499,-"
+				 /> 
+	 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/05.16_birke25121_720x.jpg?v=1653382739"
+				 produktbeskrivelse="INFILTRATOR SUPER STRETCH SHORTS - GREY 7"
+				 pris="DKK 449,-"
+				 /> 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/8F263256-5FBB-417F-82FB-0307E9127BF0_720x.jpg?v=1631736529"
+				 produktbeskrivelse="INFILTRATOR SUPER STRETCH SHORTS - GREY 7"
+				 pris="DKK 449,-"
+				 /> 
+				 
+				  
+				 
+			 </div>
+			
+
+			
+		</section>
+		<Footer />
+		</main>
+		
 		
 	</body>
 </html>
+
+
+<style>
+	.page-width {
+		padding: 0 40px;
+		box-sizing: border-box;
+	}
+
+	.card_komponent {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+           width:100%;
+           max-width:1000px;
+           margin:64px auto;
+           gap: 32px;
+        }
+	
+	main {
+    margin-inline: 10%;
+	}
+
+		
+</style>

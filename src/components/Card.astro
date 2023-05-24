@@ -1,8 +1,8 @@
 ---
-const {produktbeskrivelse, pris} = Astro.props;
+const {produktbeskrivelse, pris, imgPath} = Astro.props;
 ---
 <article class="card">
-    <img src="https://via.placeholder.com/300x500" alt="Billede" width="300" height="500">
+  <a href="/singleview"><img src={imgPath} alt="" height="300" width="500" /> </a>
     <h3>{produktbeskrivelse}</h3>
     <p>{pris}</p>
    
@@ -14,6 +14,7 @@ const {produktbeskrivelse, pris} = Astro.props;
       border-radius: 5px;
       font-family: var(--fontFamiliesFontMono);
       font-size: 1rem;
+      cursor: pointer;
       
     }
 

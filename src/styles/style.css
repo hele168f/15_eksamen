@@ -16,3 +16,26 @@ body {
 main {
   margin-inline: 10%;
 }
+
+#breadcrumb ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#breadcrumb li {
+  display: inline;
+  font-size: 12.8px;
+  text-decoration: none;
+
+}
+
+#breadcrumb li a {
+  text-decoration: none;
+  color:white;
+}
+
+#breadcrumb li:not(:last-child):after {
+  content: ">";
+  margin: 0 5px;
+}

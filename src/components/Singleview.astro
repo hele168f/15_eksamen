@@ -7,13 +7,13 @@ import Button from "../components/Button.astro";
 <section >
   <div class="container">
     <div class="grid_1">
-    <img src="https://via.placeholder.com/300x500" alt="Billede" width="300" height="500">
+    <img src="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/3FA13A23-AB0F-4CC5-8F23-AEFA08817564_1_105_ccopy_720x.jpg?v=1679658089" alt="Produkt_Billede" width="400">
   </div>
   <div class="grid_2">
     <div>
-      <h2 class="title">PRODUKTTITEL</h2>
-        <p class="description">Produktbeskrivelse</p>
-        <p class="price">Pris: $XX</p>
+      <h2 class="title">INFILTRATOR SUPER STRETCH SHORTS 7" </h2>
+        <p class="description">Grønne træningsshorts</p>
+        <p class="price">DKK 449,-</p>
     </div>
   
     <div>
@@ -43,7 +43,7 @@ import Button from "../components/Button.astro";
   
     <div class="buttons">
       <Button href="/" variant="primary">LÆG I KURV</Button>
-      <button>HJERTE</button>
+      <button class="heart-button"><img src="heartyellow.png" width="25px" alt=""></button>
     </div>
   
     <div class="infos">
@@ -77,10 +77,17 @@ import Button from "../components/Button.astro";
     <div>
       <div class="anmeldelser">
         <p>Anmeldelser (33)</p>
-      <img src="https://via.placeholder.com/128x30" alt="Billede" width="128" height="30">
+        <svg width="122" height="25" viewBox="0 0 122 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.9431 0L15.6636 8.37293H24.4675L17.345 13.5477L20.0656 21.9206L12.9431 16.7459L5.82066 21.9206L8.5412 13.5477L1.41875 8.37293H10.2226L12.9431 0Z" fill="#F39C12"/>
+          <path d="M37.178 0L39.8985 8.37293H48.7023L41.5799 13.5477L44.3004 21.9206L37.178 16.7459L30.0555 21.9206L32.7761 13.5477L25.6536 8.37293H34.4574L37.178 0Z" fill="#F39C12"/>
+          <path d="M61.4128 0L64.1334 8.37293H72.9372L65.8147 13.5477L68.5353 21.9206L61.4128 16.7459L54.2904 21.9206L57.0109 13.5477L49.8885 8.37293H58.6923L61.4128 0Z" fill="#F39C12"/>
+          <path d="M85.6477 0L88.3682 8.37293H97.1721L90.0496 13.5477L92.7701 21.9206L85.6477 16.7459L78.5253 21.9206L81.2458 13.5477L74.1233 8.37293H82.9272L85.6477 0Z" fill="#F39C12"/>
+          <path d="M109.883 0L112.603 8.37293H121.407L114.284 13.5477L117.005 21.9206L109.883 16.7459L102.76 21.9206L105.481 13.5477L98.3582 8.37293H107.162L109.883 0Z" fill="#F39C12"/>
+          </svg>
+          
       </div>
       <div class="anmeldelser_scale">
-        <!-- <img src="https://via.placeholder.com/636x150" alt="Billede" width="636" height="150"> -->
+        
       </div>
       <Button href="/" variant="primary">LÆS ALLE ANMELDELSER</Button>
     </div>
@@ -92,21 +99,26 @@ import Button from "../components/Button.astro";
   
   
 <h2>SE ANDRE PRODUKTER</h2>
-  <div class="card_komponent">
-    <Card 
-  produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
-  pris="DKK 495,-"
-		    />
+<div class="card_komponent">
+  <Card 
+  imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE4456_360x.jpg?v=1675599061"
+   produktbeskrivelse="T-SHIRT MED MILITÆR PRINT"
+   pris="DKK 199,-"
+   /> 
 
-  <Card 
-  produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
-  pris="DKK 495,-"
-		    />
-  <Card 
-  produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
-  pris="DKK 495,-"
-    />  
-  </div>
+   <Card 
+   imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE_GIRL7296_720x.jpg?v=1668072174"
+   produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
+   pris="DKK 495,-"
+   /> 
+   
+   <Card 
+   imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE_GIRL7271_720x.jpg?v=1668072251"
+   produktbeskrivelse="CROP TANK - DARK CLAY"
+   pris="DKK 275,-"
+   /> 
+   
+ </div>
 </section>
 
 
@@ -190,6 +202,15 @@ import Button from "../components/Button.astro";
   color: white;
   height: 40px;
   width: 40px;
+  cursor: pointer;
+}
+
+.heart-button {
+  margin-right: 8px;
+  border-color: var(--yellowGul300);
+  background-color: black;
+  height: 60px;
+  width: 60px;
   cursor: pointer;
 }
 
@@ -335,247 +356,3 @@ dropdown.classList.toggle('active');
 
 
 
-<!-- <div class="singleview-container">
-    <div class="image-container">
-      <img src="https://via.placeholder.com/300x500" alt="Produktbillede">
-    </div>
-    <div class="content-container">
-      <h2 class="title">Produkttitel</h2>
-      <p class="description">Produktbeskrivelse</p>
-      <p class="price">Pris: $XX</p>
-      <hr>
-      <div class="size-container">
-        <p class="size-info">Størrelse:</p>
-        <p class="size-guide">Størrelsesguide</p>
-      </div>
-      
-      <div class="size-buttons">
-        <button class="size-button">XS</button>
-        <button class="size-button">S</button>
-        <button class="size-button">M</button>
-        <button class="size-button">L</button>
-        <button class="size-button">XL</button>
-      </div>
-
-      <p>Antal:</p>
-      <div class="quantity-container">
-        
-        <button class="minus-button">-</button>
-        <input type="text" class="quantity-input" value="1">
-        <button class="plus-button">+</button>
-      </div>
-      <section>
-        <div>
-            <button class="add-to-cart-button">Læg i kurv</button>
-        <button class="size-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
-            <path d="M20.84 4.58a5.5 5.5 0 0 0-7.78 0L12 5.94l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.49l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-          </svg>
-          </button>
-        </div>
-        
-      <div class="infos">
-        <p>Fri Levering</p>
-        <p>30 dages returret</p>
-        <p>Levering 2-3 dage</p>
-      </div>
-      </section>
-      
-      <div class="dropdown">
-        <h4 class="dropdown-title">Beskrivelse og pasform <span class="arrow-down">&#9662;</span></h4>
-        <div class="dropdown-content">
-          <p>Krafla takes its name from one of Iceland's most powerful volcanoes. This elegant long-length vest is designed to provide added warmth for those who battle the elements in their everyday commute. Boxy fit silhouette with a clean and simple design. Lightweight recycled down insulation with 700 fill power ensures enduring warmth without adding any bulk. The outer shell is made from 100% recycled fibers, colored with natural dyes. Two zipped front pockets and one inner zipped chest pocket. Male model is 189 cm / 6' 2" tall and wearing size M/L.</p>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <h4 class="dropdown-title">Detaljer og pasning<span class="arrow-down">&#9662;</span></h4>
-        <div class="dropdown-content">
-          <p>Krafla takes its name from one of Iceland's most powerful volcanoes. This elegant long-length vest is designed to provide added warmth for those who battle the elements in their everyday commute. Boxy fit silhouette with a clean and simple design. Lightweight recycled down insulation with 700 fill power ensures enduring warmth without adding any bulk. The outer shell is made from 100% recycled fibers, colored with natural dyes. Two zipped front pockets and one inner zipped chest pocket. Male model is 189 cm / 6' 2" tall and wearing size M/L.</p>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <h4 class="dropdown-title">Levering og returnering <span class="arrow-down">&#9662;</span></h4>
-        <div class="dropdown-content">
-          <p>Krafla takes its name from one of Iceland's most powerful volcanoes. This elegant long-length vest is designed to provide added warmth for those who battle the elements in their everyday commute. Boxy fit silhouette with a clean and simple design. Lightweight recycled down insulation with 700 fill power ensures enduring warmth without adding any bulk. The outer shell is made from 100% recycled fibers, colored with natural dyes. Two zipped front pockets and one inner zipped chest pocket. Male model is 189 cm / 6' 2" tall and wearing size M/L.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <style>
-
-.plus-button {
-    cursor: pointer;
-}
-
-.minus-button {
-    cursor: pointer;
-}
-.singleview-container {
-  display: flex;
-  margin: 32px;
-}
-
-.image-container {
-  flex: 1;
-}
-
-.size-info{
-    margin-top: 0;
-}
-
-.size-guide {
-    margin-top: 0;
-    cursor: pointer;
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-}
-
-.content-container {
-  flex: 2;
-  padding-inline: 32px;
-  padding-right: 128px;
-}
-
-.title {
-  font-size: 24px;
-  margin-top: 0;
-}
-
-.description {
-  margin-top: 10px;
-  font-size: 16px;
-}
-
-.price {
-  margin-top: 10px;
-}
-
-
-
-.size-container {
- display: flex;
- justify-content: space-between;
-
-}
-
-.size-buttons {
-  margin-top: 16px;
-  
-}
-
-.size-button {
-  margin-right: 8px;
-  border-color: var(--yellowGul300);
-  background-color: black;
-  color: white;
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
-}
-
-.quantity-container {
-  margin-top: 20px;
-}
-
-.quantity-container p {
-  display: inline-block;
-  margin-right: 5px;
-}
-
-.quantity-input {
-  width: 40px;
-  text-align: center;
-}
-
-.add-to-cart-button {
-  margin-top: 20px;
-  padding: 12px 256px;
-  background-color: var(--yellowGul300);
-  color: black;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.arrow-down {
-  transform: rotate(0deg);
-  transition: transform 0.3s ease;
-}
-
-.dropdown-content {
-  display: none;
-  padding: 10px;
-  margin-top: 10px;
-  background-color: #000000;
- 
-}
-
-.dropdown-content p {
-  margin: 0;
-}
-
-.dropdown.active .arrow-down {
-  transform: rotate(180deg);
-}
-
-.dropdown.active .dropdown-content {
-  display: block;
-}
-
-.infos {
-    display: flex;
-    justify-content:space-around;
-    gap:8px;
-}
-
-  </style>
-
-  <script>
-    // Tilføj eventlyttere til plus- og minus-knapper
-const minusButton = document.querySelector('.minus-button');
-const plusButton = document.querySelector('.plus-button');
-const quantityInput = document.querySelector('.quantity-input');
-
-minusButton.addEventListener('click', decreaseQuantity);
-plusButton.addEventListener('click', increaseQuantity);
-
-function decreaseQuantity() {
-  let quantity = parseInt(quantityInput.value);
-  if (quantity > 1) {
-    quantity--;
-    quantityInput.value = quantity;
-  }
-}
-
-function increaseQuantity() {
-  let quantity = parseInt(quantityInput.value);
-  quantity++;
-
-  quantityInput.value = quantity;
-}
-
-
-// Tilføj eventlyttere til dropdown-titler
-const dropdownTitles = document.querySelectorAll('.dropdown-title');
-dropdownTitles.forEach((title) => {
-  title.addEventListener('click', toggleDropdown);
-});
-
-function toggleDropdown() {
-  const dropdown = this.closest('.dropdown');
-  dropdown.classList.toggle('active');
-}
-  </script> -->

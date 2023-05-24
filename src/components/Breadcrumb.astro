@@ -1,0 +1,16 @@
+---
+const {home} = Astro.props;
+---
+<div id="breadcrumb">
+  <h2>{home}</h2>
+    <slot/>
+  </div>
+
+
+  <style>
+    #breadcrumb {
+      margin-bottom: 32px;
+    }
+  </style>
+
+

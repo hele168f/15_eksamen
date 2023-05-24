@@ -7,6 +7,7 @@ import Singleview from "../components/Singleview.astro";
 import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro" ;
 import Raad from "../components/Raad.astro" ;
+import Breadcrumb from "../components/Breadcrumb.astro";
 ---
 
 <html lang="en">
@@ -22,6 +23,10 @@ import Raad from "../components/Raad.astro" ;
 	</head>
 	<body>
         <main>
+        <h2>Breadcrumb Component</h2>
+        <div>
+            <Breadcrumb />
+        </div>
 
         
         <h2>Card Component</h2>
@@ -88,6 +93,9 @@ import Raad from "../components/Raad.astro" ;
 </html>
 
 <style>
+    main {
+    margin-inline: 10%;
+}
 
     h2 {
         place-self: center;

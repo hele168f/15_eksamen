@@ -3,6 +3,9 @@ import"../styles/style.css";
 import"../styles/global.css";
 import Nav from "../components/Nav.astro" ;
 import Card from "../components/Card.astro" ;
+import Breadcrumb from "../components/Breadcrumb.astro";
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -14,10 +17,106 @@ import Card from "../components/Card.astro" ;
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Black+Ops+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-		<title>Birke 1972</title>
+		<title>Birke 1972 - Kvinder</title>
 	</head>
 	<body>
-		<Nav />
+		<main>
+			<Nav />
+		<Breadcrumb 
+		forrige="Forside"
+		nuvaerendePage="Kvinder"
+		/>
+
+		<section class="page-width">
+			<Button href="/" variant="primary">FILTRER</Button>
+			<div class="card_komponent">
+				<Card 
+				imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/DivemasterWclayback_360x.jpg?v=1678434760"
+				 produktbeskrivelse="2-LAYER INFILTRATOR SUPER STRETCH 7 - BLACK"
+				 pris="DKK 499,-"
+				 /> 
+	 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE_GIRL7391_360x.jpg?v=1668073159"
+				 produktbeskrivelse="INFILTRATOR SUPER STRETCH SHORTS - GREY 7"
+				 pris="DKK 449,-"
+				 /> 
+				 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE_GIRL7405_360x.jpg?v=1668073206"
+				 produktbeskrivelse="INFILTRATOR SUPER STRETCH SHORTS - GREEN 7"
+				 pris="DKK 449,-"
+				 /> 
+				 
+			 </div>
+			 <div class="card_komponent">
+				<Card 
+				imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE_GIRL7343_360x.jpg?v=1668072979"
+				 produktbeskrivelse="T-SHIRT MED MILITÆR PRINT"
+				 pris="DKK 199,-"
+				 /> 
+	 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE_GIRL7318_360x.jpg?v=1668072346"
+				 produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
+				 pris="DKK 495,-"
+				 /> 
+				 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE4444_360x.jpg?v=1675598377"
+				 produktbeskrivelse="LØBESHORTS"
+				 pris="DKK 395,-"
+				 /> 
+				 
+			 </div>
+
+			 <div class="card_komponent">
+				<Card 
+				imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE4456_360x.jpg?v=1675599061"
+				 produktbeskrivelse="T-SHIRT MED MILITÆR PRINT"
+				 pris="DKK 199,-"
+				 /> 
+	 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE_GIRL7296_720x.jpg?v=1668072174"
+				 produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
+				 pris="DKK 495,-"
+				 /> 
+				 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE_GIRL7271_720x.jpg?v=1668072251"
+				 produktbeskrivelse="CROP TANK - DARK CLAY"
+				 pris="DKK 275,-"
+				 /> 
+				 
+			 </div>
+		</section>
+		<Footer />
+		</main>
+		
 		
 	</body>
 </html>
+
+
+<style>
+
+	main {
+		margin-inline: 10%;
+	}
+	.page-width {
+		padding: 0 40px;
+		box-sizing: border-box;
+	}
+
+	.card_komponent {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+           width:100%;
+           max-width:1000px;
+           margin:64px auto;
+           gap: 32px;
+        }
+
+		
+</style>
