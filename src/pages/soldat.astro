@@ -5,6 +5,7 @@ import Nav from "../components/Nav.astro" ;
 import Footer from "../components/Footer.astro" ;
 import Raad from "../components/Raad.astro" ;
 import Grit from "../components/Grit.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 
 ---
 
@@ -22,10 +23,22 @@ import Grit from "../components/Grit.astro";
 	<body>
 		<main>
 		<Nav />
+    <Breadcrumb>
+			<div id="breadcrumb" >
+				<ul>
+				<li><a href="/index">Forside</a></li>
+				<li><a href="/om">Om Birke</a></li>
+        <li><a href="/">Jægersoldatens anbefalinger</a></li>
+			</ul>
+			</div>
+		
+		</Breadcrumb>
+
 		 <section class="top">
 			<h1>JÆGERSOLDATENS ANBEFALINGER</h1>
 			 <img src="fald.svg" alt="faldskam">
 		 </section>
+     <div class="vertical-line"></div>
 		<section>
         <Raad
         nummer="RÅD #1"
@@ -74,6 +87,7 @@ section {
     max-width: 100%;
     animation: swing 3s ease-in-out infinite alternate, scale 3s ease-in-out infinite alternate;
     transform-origin: center;
+    margin-top: 32px;
   }
 
   @keyframes swing {
@@ -87,6 +101,18 @@ section {
       transform: rotateZ(10deg);
     }
   }
+
+  .vertical-line {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 5px; /* Adjust this value to set the width of the line */
+  height: 140%; /* Adjust this value to set the height of the line */
+  background-color: orange;
+  transform: translateX(-50%);
+  z-index: -1;
+  width: 40px;
+}
 
   
   

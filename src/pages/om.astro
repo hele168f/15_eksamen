@@ -4,6 +4,7 @@ import"../styles/global.css";
 import Nav from "../components/Nav.astro" ;
 import Card from "../components/Card.astro" ;
 import Footer from "../components/Footer.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
 ---
 
 <html lang="en">
@@ -20,6 +21,16 @@ import Footer from "../components/Footer.astro";
 	<body>
 		<main>
 			<Nav />
+			<Breadcrumb>
+				<div id="breadcrumb" >
+					<ul>
+					<li><a href="/index">Forside</a></li>
+					<li><a href="/">Om Birke</a></li>
+					
+				</ul>
+				</div>
+				
+			</Breadcrumb>
 
 			<Footer />
 		</main>

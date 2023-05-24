@@ -22,10 +22,15 @@ import Footer from "../components/Footer.astro";
 	<body>
 		<main>
 			<Nav />
-		<Breadcrumb 
-		forrige="Forside"
-		nuvaerendePage="Kvinder"
-		/>
+			<Breadcrumb>
+				<div id="breadcrumb" >
+					<ul>
+					<li><a href="/index">Forside</a></li>
+					<li><a href="/">Kvinder</a></li>
+				</ul>
+				</div>
+				
+			</Breadcrumb>
 
 		<section class="page-width">
 			<Button href="/" variant="primary">FILTRER</Button>
