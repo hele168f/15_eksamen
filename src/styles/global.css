@@ -1,5 +1,6 @@
+/* Alle farver */
+
 :root {
-  /* farver */
   --blueBlue100: #89bae9;
   --blueBlue200: #5199de;
   --blueBlue300: #1877d3;
@@ -11,7 +12,7 @@
   --greenGreen300: #2c8554;
   --greenGreen400: #22653f;
   --greenGreen500: #17462c;
-  --greenGrN600: #153e27;
+  --greenGreen600: #153e27;
   --yellowGul100: #ffc870;
   --yellowGul200: #fdb647;
   --yellowGul300: #f39c12;
@@ -24,172 +25,88 @@
   --redRed400: #b60000;
   --redRed500: #810000;
   --redRed600: #760000;
-  --primaryHvid: #f2f2f2;
-  --primarySort: #0f0f0f;
-  --textPrimary: #f2f2f2; /* Primære farve for text */
-  --textInverse: #0f0f0f; /* Tekst på billedereller inverse bg */
-  --textHighlight: #f39c12;
-  --bgPrimary: #0f0f0f; /* Primære farve til bg */
-  --actionPrimary: #f39c12; /* Primære knappers bg */
-  --actionPrimaryHover: #fdb647; /* primære knappers bg i hover */
-  --actionPrimaryFocus: #ffc870;
-
-  /* font */
-  --fontFamiliesFontSans: Open Sans;
-  --fontFamiliesFontMono: Anonymous Pro;
-  --fontFamiliesFontDisplay: Black Ops One;
-
-  /* Line height */
-  --lineHeights0: AUTO;
-  --lineHeightsBase: 1.5;
-  --lineHeightsTitle: 1.3;
-  --lineHeightsInterface: 1.1;
-
-  /* font weight */
-  --fontWeightsFontRegular: 400;
-  --fontWeightsFontMedium: 500;
-  --fontWeightsFontBold: 700;
-  --fontWeightsFontExtraBold: 900;
-
-  /* font size */
-  --fontSizeXs: 10.25px;
-  --fontSizeSm: 12.8px;
-  --fontSizeBase: 16px;
-  --fontSizeLg: 20px;
-  --fontSizeXl: 25px;
-  --fontSize2xl: 31.25px;
-  --fontSize3xl: 39.06px;
-  --fontSize4xl: 48.83px;
-  --fontSize5xl: 61.04px;
-  --fontSize6xl: 76.29px;
-
-  --letterSpacing0: 0em;
-  --paragraphSpacing0: 0;
-  --openSansTextXsFontFamily: Open Sans;
-  --openSansTextXsFontWeight: 400;
-  --openSansTextXsLineHeight: AUTO;
-  --openSansTextXsFontSize: 10.25px;
-  --openSansTextXsLetterSpacing: 0em;
-  --openSansTextXsParagraphSpacing: 0;
-  --openSansTextXsParagraphIndent: 0px;
-  --openSansTextXsTextCase: none;
-  --openSansTextXsTextDecoration: none;
-  --openSansTextSmFontFamily: Open Sans;
-  --openSansTextSmFontWeight: 400;
-  --openSansTextSmLineHeight: AUTO;
-  --openSansTextSmFontSize: 12.8px;
-  --openSansTextSmLetterSpacing: 0em;
-  --openSansTextSmParagraphSpacing: 0;
-  --openSansTextSmParagraphIndent: 0px;
-  --openSansTextSmTextCase: none;
-  --openSansTextSmTextDecoration: none;
-  --openSansTextBaseFontFamily: Open Sans;
-  --openSansTextBaseFontWeight: 400;
-  --openSansTextBaseLineHeight: AUTO;
-  --openSansTextBaseFontSize: 16px;
-  --openSansTextBaseLetterSpacing: 0em;
-  --openSansTextBaseParagraphSpacing: 0;
-  --openSansTextBaseParagraphIndent: 0px;
-  --openSansTextBaseTextCase: none;
-  --openSansTextBaseTextDecoration: none;
-  --openSansTextLgFontFamily: Open Sans;
-  --openSansTextLgFontWeight: 500;
-  --openSansTextLgLineHeight: AUTO;
-  --openSansTextLgFontSize: 20px;
-  --openSansTextLgLetterSpacing: 0em;
-  --openSansTextLgParagraphSpacing: 0;
-  --openSansTextLgParagraphIndent: 0px;
-  --openSansTextLgTextCase: none;
-  --openSansTextLgTextDecoration: none;
-  --anonymousProTextXlFontFamily: Anonymous Pro;
-  --anonymousProTextXlFontWeight: 700;
-  --anonymousProTextXlLineHeight: AUTO;
-  --anonymousProTextXlFontSize: 25px;
-  --anonymousProTextXlLetterSpacing: 0em;
-  --anonymousProTextXlParagraphSpacing: 0;
-  --anonymousProTextXlParagraphIndent: 0px;
-  --anonymousProTextXlTextCase: none;
-  --anonymousProTextXlTextDecoration: none;
-  --anonymousProText2xlFontFamily: Anonymous Pro;
-  --anonymousProText2xlFontWeight: 700;
-  --anonymousProText2xlLineHeight: AUTO;
-  --anonymousProText2xlFontSize: 31.25px;
-  --anonymousProText2xlLetterSpacing: 0em;
-  --anonymousProText2xlParagraphSpacing: 0;
-  --anonymousProText2xlParagraphIndent: 0px;
-  --anonymousProText2xlTextCase: none;
-  --anonymousProText2xlTextDecoration: none;
-  --anonymousProText3xlFontFamily: Anonymous Pro;
-  --anonymousProText3xlFontWeight: 700;
-  --anonymousProText3xlLineHeight: AUTO;
-  --anonymousProText3xlFontSize: 39.06px;
-  --anonymousProText3xlLetterSpacing: 0em;
-  --anonymousProText3xlParagraphSpacing: 0;
-  --anonymousProText3xlParagraphIndent: 0px;
-  --anonymousProText3xlTextCase: none;
-  --anonymousProText3xlTextDecoration: none;
-  --anonymousProText4xlFontFamily: Anonymous Pro;
-  --anonymousProText4xlFontWeight: 700;
-  --anonymousProText4xlLineHeight: AUTO;
-  --anonymousProText4xlFontSize: 48.83px;
-  --anonymousProText4xlLetterSpacing: 0em;
-  --anonymousProText4xlParagraphSpacing: 0;
-  --anonymousProText4xlParagraphIndent: 0px;
-  --anonymousProText4xlTextCase: none;
-  --anonymousProText4xlTextDecoration: none;
-  --anonymousProText5xlFontFamily: Anonymous Pro;
-  --anonymousProText5xlFontWeight: 700;
-  --anonymousProText5xlLineHeight: AUTO;
-  --anonymousProText5xlFontSize: 61.04px;
-  --anonymousProText5xlLetterSpacing: 0em;
-  --anonymousProText5xlParagraphSpacing: 0;
-  --anonymousProText5xlParagraphIndent: 0px;
-  --anonymousProText5xlTextCase: none;
-  --anonymousProText5xlTextDecoration: none;
-  --blackOpsOneText6xlFontFamily: Black Ops One;
-  --blackOpsOneText6xlFontWeight: 900;
-  --blackOpsOneText6xlLineHeight: AUTO;
-  --blackOpsOneText6xlFontSize: 76.29px;
-  --blackOpsOneText6xlLetterSpacing: 0em;
-  --blackOpsOneText6xlParagraphSpacing: 0;
-  --blackOpsOneText6xlParagraphIndent: 0px;
-  --blackOpsOneText6xlTextCase: none;
-  --blackOpsOneText6xlTextDecoration: none;
-  --textCaseNone: none;
-  --textDecorationNone: none;
-  --paragraphIndent0: 0px;
-  --spacingXs: 4px;
-  --spacingSm: 8px;
-  --spacingMd: 16px;
-  --spacingLg: 32px;
-  --spacingXl: 64px;
-  --spacing2xl: 128px;
-  --textPrimary: #ffffff; /* Primære farve for text */
-  --textInverse: #000000; /* Tekst på billedereller inverse bg */
-  --textHighlight: #f39c12;
-  --bgPrimary: #000000; /* Primære farve til bg */
-  --actionPrimary: #f39c12; /* Primære knappers bg */
-  --actionPrimaryHover: #fdb647; /* primære knappers bg i hover */
-  --actionPrimaryFocus: #ffc870;
-  --spaceCardStackNone: 0;
-  --spaceCardStackXs: 4px;
-  --spaceCardStackSm: 8px;
-  --spaceCardStackMd: 16px;
-  --spaceCardStackLg: 32px;
-  --spaceCardStackXl: 64px;
-  --spaceCardStack2xl: 128px;
-  --spaceCardInlineNone: 0;
-  --spaceCardInlineXs: 4px;
-  --spaceCardInlineSm: 8px;
-  --spaceCardInlineMd: 16px;
-  --spaceCardInlineLg: 32px;
-  --spaceCardInlineXl: 64px;
-  --spaceCardInline2xl: 128px;
-  --spacePageStackNone: 0;
-  --baseLineHeightTitle: 1.3;
-  --baseLineHeightBody: 1.5;
-  --baseLineHeightInterface: 1.1;
-  --baseFontWeightTitle: 700;
-  --baseFontWeightBody: 400;
-  --baseFontWeightInterfaceDefault: 500;
 }
+
+
+
+:root {
+  /* farver */
+  --Primary-Text-Primary: #f2f2f2;
+  --Primary-Text-Inverse: #0F0F0F;
+  --Primary-Text-Highlight: #f39c12;
+  --Bg-Primary: #0F0F0F;
+  --Action-Primary: #f39c12;
+  --Action-Primary-Hover: #fdb647;
+  --Action-Primary-focus: #ffc870;
+
+  /* spacing vertikalt */
+  --space-card-stack-none: 0;
+  --space-card-stack-xs: var(--spacing-xs);
+  --space-card-stack-sm: var(--spacing-sm);
+  --space-card-stack-md: var(--spacing-md);
+  --space-card-stack-lg: var(--spacing-lg);
+  --space-card-stack-xl: var(--spacing-xl);
+  --space-card-stack-2xl: var(--spacing-2xl);
+
+   /* spacing horisontalt */
+  --space-card-inline-none: 0;
+  --space-card-inline-xs: var(--spacing-xs);
+  --space-card-inline-sm: var(--spacing-sm);
+  --space-card-inline-md: var(--spacing-md);
+  --space-card-inline-lg: var(--spacing-lg);
+  --space-card-inline-xl: var(--spacing-xl);
+  --space-card-inline-2xl: var(--spacing-2xl);
+  --space-page-stack-none: 0;
+
+  /* line height */
+  --Line-height-Title: 110%;
+  --Line-height-Body: 150%;
+
+  /* font sizes */
+
+      /* Display */
+    --Font-size-Display-Heading: var(--fontSize-4xl);
+    --Font-size-Display-Subheading: var(--fontSize-3xl);
+
+      /* Heading */
+    --Font-size-Heading-H1: var(--fontSize-2xl);
+    --Font-size-Heading-H2: var(--fontSize-xl);
+    --Font-size-Heading-H3: var(--fontSize-lg);
+
+      /* Button */
+    --Font-size-Button-Primary: var(--fontSize-lg);
+    --Font-size-Button-Filter: var(--fontSize-base);
+
+      /* Body */
+    --Font-size-Body-Body: var(--fontSize-base);
+    --Font-size-Body-Review: var(--fontSize-base);
+    --Font-size-Body-Breadcrumb: var(--fontSize-sm);
+
+      /* Navigation */
+    --Font-size-Navigation-Menu: var(--fontSize-base);
+    --Font-size-Navigation-Dropdown: var(--fontSize-base);
+
+  /* Letter spacing */
+
+      /* Display */
+      --Letter-spacing-Display-Heading: calc(var(--Font-size-Display-Heading) * 0.12);
+      --Letter-spacing-Display-Subheading: calc(var(--Font-size-Display-Subheading) * 0.12);
+
+      /* Heading */
+      --Letter-spacing-Heading-H1: calc(var(--Font-size-Heading-H1) * 0.12);
+      --Letter-spacing-Heading-H2: calc(var(--Font-size-Heading-H2) * 0.12);
+      --Letter-spacing-Heading-H3: calc(var(--Font-size-Heading-H3) * 0.12);
+
+      /* Button */
+      --Letter-spacing-Button-Primary: calc(var(--Font-size-Button-Primary) * 0.12);
+      --Letter-spacing-Button-Filter: calc(var(--Font-size-Button-Filter) * 0.12);
+
+      /* Body */
+      --Letter-spacing-Body-Body: calc(var(--Font-size-Body-Body) * 0.12);
+      --Letter-spacing-Body-Review: calc(var(--Font-size-Body-Review) * 0.12);
+      --Letter-spacing-Body-Breadcrumb: calc(var(--Font-size-Body-Breadcrumb) * 0.12);
+
+      /* Navigation */
+      --Letter-spacing-Navigation-Menu: calc(var(--Font-size-Navigation-Menu) * 0..12);
+}
+
