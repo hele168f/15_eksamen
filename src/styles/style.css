@@ -39,3 +39,13 @@ main {
   content: ">";
   margin: 0 5px;
 }
+
+
+
+
+/* Skriftstørrelser */
+h1{
+	font-family: var(--blackOpsOneText6xlFontFamily);
+	font-size: 40px;
+
+}
