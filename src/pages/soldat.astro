@@ -63,6 +63,21 @@ import Breadcrumb from "../components/Breadcrumb.astro";
         citat=" “At tage udgangspunkt i ens egen situation er afgørende for resultatet og effekten af træningen, og det er vigtigt at eksperimentere og prøve nye tilgange for at opnå forbedringer.”"
         />
       </section>
+	  <h2>Jægersoldatens anmeldelse</h2>
+	  <section> 
+		<Grit
+		title="JÆGERSOLDAT GENNEM 35 ÅR ANMELDER BRIKE"
+		tekst="”Fysisk træning i almindelighed og løb i særdeleshed har nærmest været en passion for mig, siden jeg som 17 årig startede i forsvaret. Jeg har over årene dyrket alt fra militær femkamp, triatlon og landevejsløb fra 5.000 m til maraton, cross country, orienteringsløb, trailløb og OCR. Jeg styrke- og løbetræner stadig ca. hver anden dag, og deltager fra tid til anden i diverse motionsløb og events.”"
+		tekst="“Jeg har i egenskab af bl.a. formand for Jægerkorpsets idrætsforening i mere end ét årti haft fornøjelse af, at samarbejde med Per Vorbeck om idrætsbeklædning til kvalitetsbevidste brugere siden 2014, og Birkes nye produkter lever fuldt ud op til mine forventninger og tidligere leverede produkter - både hvad angår design, funktionalitet og komfort. Min oplevelse af de enkelte produkter er helt i tråd med præsentationen af dem på Birkes hjemmeside.”"
+		/>
+	  </section>
+     <section> 
+		<Grit
+		title=" TRÆNINGSRÅD FRA EN JÆGERSOLDAT."
+		tekst="”Carsten Møller har været jægersoldat siden 1987, og er tidligere ansvarlig for den fysiske træning i korpset samt formand for Jægerkorpsets idrætsforening igennem et årti."
+		tekst="Carsten har været dedikeret løber i mere end 40 år, hvilket kombineret med hans erfaringer fra specialstyrkerne har givet ham en del viden om, hvordan man opbygger kroppen til, at kunne klare et højt belastningsniveau over lang tid - uden at få skader.NU deler han nogle af sine tanker og personlige erfaringer med træning gennem et langt, aktivt liv i et udfordrende og krævende miljø."
+		/>
+	  </section>
 
 		<Footer />
 		</main>
@@ -72,8 +87,8 @@ import Breadcrumb from "../components/Breadcrumb.astro";
 <style> 
 
 section {
- margin-top: var(--spacingLg);
-  margin-bottom: var(--spacingLg);
+  margin-top: var(--spacingXl);
+  margin-bottom: var(--spacingXl);
 }
 .top {
 	display: grid;
@@ -81,6 +96,14 @@ section {
 	justify-items: center; 
     align-items: center;
 	margin-bottom:var(--spacingLg);
+	
+}
+h2{
+	 font-family: var(--blackOpsOneText6xlFontFamily);
+    font-size: var(--blackOpsOneText6xlFontSize);
+    padding-bottom: var(--spacingSm);
+    color: var(--yellowGul300);
+   text-align: center;
 	
 }
   img {
@@ -104,10 +127,10 @@ section {
 
   .vertical-line {
   position: absolute;
-  top: 100%;
+  top: 128%;
   left: 50%;
   width: 5px; /* Adjust this value to set the width of the line */
-  height: 140%; /* Adjust this value to set the height of the line */
+  height: 220%; /* Adjust this value to set the height of the line */
   background-color: orange;
   transform: translateX(-50%);
   z-index: -1;

@@ -101,6 +101,8 @@
   --openSansTextLgParagraphIndent: 0px;
   --openSansTextLgTextCase: none;
   --openSansTextLgTextDecoration: none;
+  --anonymousProTextLgFontFamily: Anonymous Pro;
+  --anonymousProTextLgFontSize: 20px;
   --anonymousProTextXlFontFamily: Anonymous Pro;
   --anonymousProTextXlFontWeight: 700;
   --anonymousProTextXlLineHeight: AUTO;
