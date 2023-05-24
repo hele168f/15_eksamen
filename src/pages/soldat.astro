@@ -2,7 +2,10 @@
 import"../styles/style.css";
 import"../styles/global.css";
 import Nav from "../components/Nav.astro" ;
-import Card from "../components/Card.astro" ;
+import Footer from "../components/Footer.astro" ;
+import Raad from "../components/Raad.astro" ;
+import Grit from "../components/Grit.astro";
+
 ---
 
 <html lang="en">
@@ -17,7 +20,79 @@ import Card from "../components/Card.astro" ;
 		<title>Birke 1972</title>
 	</head>
 	<body>
+		<main>
 		<Nav />
-		
+		 <section class="top">
+			<h1>JÆGERSOLDATENS ANBEFALINGER</h1>
+			 <img src="fald.svg" alt="faldskam">
+		 </section>
+		<section>
+        <Raad
+        nummer="RÅD #1"
+        overskrift="KROPPEN ER EN SLADREHANK"
+        uddybende="Det er vigtigt at lytte til kroppens signaler og tilpasse træningspasene efter behov for at minimere risikoen for overbelastning og skader. Ved at være opmærksom på de signaler, kroppen sender, kan man justere træningsprogrammet, selvom man tidligere havde en fastlagt plan. Det er en måde at opretholde en sund træningsrutine på, samtidig med at man forstår og respekterer kroppens behov."
+        citat="“Jeg har aldrig været fan af alt for fastlagte træningsprogrammer”"
+        />
+      </section>
+	  <section>
+        <Raad
+        nummer="RÅD #2"
+        overskrift="SIMPEL OG VARIERET TRÆNING"
+        uddybende="Variation i træningen, både inden for løbetræning og på tværs af forskellige idrætsgrene, har været afgørende for mine bedste resultater og minimering af træningstræthed og skader. Ved at inkludere forskellige former for træning som orienteringsløb, cykling, styrketræning, svømning og march med tung rygsæk, opnåede jeg optimale resultater. Selvom alderen påvirker min præstationsevne, har jeg opdaget, at ved at variere mellem forskellige former for løb og fysisk træning opretholder jeg motivationen og minimerer smerterne fra et langt liv med fysisk udfoldelse. Uanset din favorit idrætsgren bør du kombinere den med andre typer træning for at opbygge en stærk og alsidig krop samt minimere risikoen for skader."
+        citat="“Variation i træningen har været afgørende for mine bedste resultater, minimering af træningstræthed og opretholdelse af motivationen.”"
+        />
+      </section>
+	  <section>
+        <Raad
+        nummer="RÅD #3"
+        overskrift="DET DER FUNGERER GODT FOR MIG, DUER IKKE NØDVENDIGVIS FOR ALLE"
+        uddybende="At tage hensyn til ens egen situation er afgørende for resultatet og effekten af træningen. Forskelle i genetik, arbejde, privatliv, bopæl og træningsalder gør det svært at finde to mennesker med helt ens forudsætninger. Man bør ikke være bange for at prøve noget nyt eller eksperimentere med metoder, der har været succesfulde for andre. Det er ved at prøve noget nyt, man opdager, om ens nuværende tilgang giver de bedste resultater, eller om tilføjelse af nye elementer som bakketræning eller MTB-ture kan forbedre ens præstation. Hvis man fortsætter med at gøre det samme som altid, vil tingene sandsynligvis forblive som de altid har været, men det er ikke altid det bedste."
+        citat=" “At tage udgangspunkt i ens egen situation er afgørende for resultatet og effekten af træningen, og det er vigtigt at eksperimentere og prøve nye tilgange for at opnå forbedringer.”"
+        />
+      </section>
+
+		<Footer />
+		</main>
 	</body>
 </html>
+
+<style> 
+h1{
+	font-family: var(--blackOpsOneText6xlFontFamily);
+	font-size: 40px;
+
+}
+section {
+ margin-top: var(--spacingLg);
+  margin-bottom: var(--spacingLg);
+}
+.top {
+	display: grid;
+	grid-template-rows: auto;
+	justify-items: center; 
+    align-items: center;
+	margin-bottom:var(--spacingLg);
+	
+}
+  img {
+    max-width: 100%;
+    animation: swing 3s ease-in-out infinite alternate, scale 3s ease-in-out infinite alternate;
+    transform-origin: center;
+  }
+
+  @keyframes swing {
+    0% {
+      transform: rotateZ(10deg);
+    }
+    50% {
+      transform: rotateZ(-10deg);
+    }
+    100% {
+      transform: rotateZ(10deg);
+    }
+  }
+
+  
+  
+</style>
+

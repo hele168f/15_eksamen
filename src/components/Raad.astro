@@ -17,12 +17,13 @@ const {nummer, overskrift, uddybende, citat} = Astro.props;
 h2{
     font-family: var(--blackOpsOneText6xlFontFamily);
     font-size: var(--blackOpsOneText6xlFontSize);
-    padding: var(--spacingSm);
+    padding-bottom: var(--spacingSm);
     color: var(--yellowGul300)
 }
 h3{
     font-family: var(--anonymousProText2xlFontFamily);
     font-size: var(--anonymousProText2xlFontSize);
+    padding-bottom: var(--spacingXs);
 }
 p {
  font-family: var(--openSansTextBaseFontFamily);
@@ -32,13 +33,15 @@ p {
 h4{
 font-family: var(--anonymousProTextXlFontFamily);
 font-size: var(--anonymousProTextXlFontSize);
-text-decoration: none;
+text-decoration: var(--anonymousProTextXlTextDecoration);
 
 }
 article {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    
+    gap: 32px;
+   justify-items: center; 
+   align-items: center;
 }
 
 </style>

@@ -1,0 +1,39 @@
+---
+
+const { title, tekst, image } = Astro.props;
+
+---
+
+
+<article> 
+    <div>
+    <h2>{title}</h2>
+    <p>{tekst}</p>
+    </div>
+    <div>
+     <img>{image}</img>
+    </div>
+</article>
+
+<style> 
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+   justify-items: center; 
+   align-items: center;
+}
+h2 {
+ font-family: var(--anonymousProTextXlFontFamily);
+ font-size: var(--anonymousProTextXlFontSize);
+ max-width: 64vh;
+ padding-bottom: var(--spacingXs);
+
+}
+p{
+ font-family: var(--openSansTextBaseFontFamily);
+ font-size: var(--openSansTextBaseFontSize);
+ max-width: 64vh;
+
+}
+</style>
