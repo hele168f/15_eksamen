@@ -3,8 +3,11 @@ import"../styles/style.css";
 import"../styles/global.css";
 import Nav from "../components/Nav.astro" ;
 import Card from "../components/Card.astro" ;
-import Button from "../components/Button.astro" ;
+import Singleview from "../components/Singleview.astro";
+import Button from "../components/Button.astro";
 import Footer from "../components/Footer.astro" ;
+import Raad from "../components/Raad.astro" ;
+import Breadcrumb from "../components/Breadcrumb.astro";
 ---
 
 <html lang="en">
@@ -15,35 +18,44 @@ import Footer from "../components/Footer.astro" ;
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="icon" type="image/x-icon" href="../public/favicon.svg">
 		<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Black+Ops+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 		<title>Birke 1972</title>
 	</head>
 	<body>
-		<main>
+        <main>
+       <Nav />
+       <Breadcrumb>
+        <div id="breadcrumb" >
+            <ul>
+                <li><a href="/index">Forside</a></li>
+                <li><a href="/maend">Mænd</a></li>
+                <li><a href="/">Træningsshorts</a></li>
+            </ul>
+        </div>
+        
+    </Breadcrumb>
+        <section>
+            <Singleview 
+            />
+        </section> 
 
-		<Nav />
-		<!-- <Card produktbeskrivelse="Produktbeskrivelse" pris="DKK 199,-"/> -->
-		<Card 
-		produktbeskrivelse="T-shirt"
-		pris="DKK 199,-"
-		/>
+    
+		<Footer />
+       
+        </main>
 
-		<div class="knap">
-		<Button href="/" variant="primary">LÆG I KURV</Button>
-		<Button href="/" variant="secondary">LÆG I KURV</Button>
-		</div>
-		<Footer></Footer>
-       </main>
-	
+        
+		
+		
 		
 	</body>
 </html>
 
 <style>
-.knap {
-	display:flex;
-	gap: 16px;
-	padding-bottom: var(--spacingLg);
+    main {
+    margin-inline: 10%;
 }
-</style>
+
+
+    
+</style> 

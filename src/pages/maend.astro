@@ -3,6 +3,9 @@ import"../styles/style.css";
 import"../styles/global.css";
 import Nav from "../components/Nav.astro" ;
 import Card from "../components/Card.astro" ;
+import Breadcrumb from "../components/Breadcrumb.astro";
+import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -17,7 +20,110 @@ import Card from "../components/Card.astro" ;
 		<title>Birke 1972</title>
 	</head>
 	<body>
-		<Nav />
+		<main>
+			<Nav />
+		<Breadcrumb>
+			<div id="breadcrumb" >
+				<ul>
+				<li><a href="/index">Forside</a></li>
+				<li><a href="/">Mænd</a></li>
+			</ul>
+			</div>
+			
+		</Breadcrumb>
+
+		<section class="page-width">
+			<Button href="/" variant="primary">FILTRER</Button>
+			<div class="card_komponent">
+				<Card 
+				imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE4393_720x.jpg?v=1675419471"
+				 produktbeskrivelse="2-LAYER INFILTRATOR SUPER STRETCH 7 - BLACK"
+				 pris="DKK 499,-"
+				 /> 
+	 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/sortinfiltrator06.10_per3472_4fab460d-3f8a-4b42-864a-ddfe58c04ebd_720x.jpg?v=1675425937"
+				 produktbeskrivelse="INFILTRATOR SUPER STRETCH SHORTS - GREY 7"
+				 pris="DKK 449,-"
+				 /> 
+				 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/3FA13A23-AB0F-4CC5-8F23-AEFA08817564_1_105_c_360x.jpg?v=1675419218"
+				 produktbeskrivelse="INFILTRATOR SUPER STRETCH SHORTS - GREEN 7"
+				 pris="DKK 449,-"
+				 />  
+				 
+			 </div>
+			 <div class="card_komponent">
+				<Card 
+				imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/3FA13A23-AB0F-4CC5-8F23-AEFA08817564_1_105_ccopy_720x.jpg?v=1679658089"
+				 produktbeskrivelse="T-SHIRT MED MILITÆR PRINT"
+				 pris="DKK 199,-"
+				 /> 
+	 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE4432_720x.jpg?v=1675428505"
+				 produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
+				 pris="DKK 495,-"
+				 /> 
+				 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/01.14_birke8057_720x.jpg?v=1642606870"
+				 produktbeskrivelse="LØBESHORTS"
+				 pris="DKK 395,-"
+				 /> 
+				 
+			 </div>
+
+			 <div class="card_komponent">
+				<Card 
+				imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/01.14_birke8099_720x.jpg?v=1642606963"
+				 produktbeskrivelse="T-SHIRT MED MILITÆR PRINT"
+				 pris="DKK 199,-"
+				 /> 
+	 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/06.10_per3513_720x.jpg?v=1625046634"
+				 produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
+				 pris="DKK 495,-"
+				 /> 
+				 
+				 <Card 
+				 imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/06.10_per3199_540x.jpg?v=1625046825"
+				 produktbeskrivelse="LØBESHORTS"
+				 pris="DKK 395,-"
+				 /> 
+				 
+			 </div>
+		</section>
+		<Footer />
+		</main>
+		
 		
 	</body>
 </html>
+
+
+<style>
+
+main {
+margin-inline: 10%;
+}
+.page-width {
+	padding: 0 40px;
+	box-sizing: border-box;
+}
+
+.card_komponent {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	width:100%;
+	max-width:1000px;
+	margin:64px auto;
+	gap: 32px;
+}
+
+
+
+		
+</style>
