@@ -5,6 +5,8 @@ import Nav from "../components/Nav.astro" ;
 import Card from "../components/Card.astro" ;
 import Singleview from "../components/Singleview.astro";
 import Button from "../components/Button.astro";
+import Footer from "../components/Footer.astro" ;
+import Raad from "../components/Raad.astro" ;
 ---
 
 <html lang="en">
@@ -50,8 +52,31 @@ import Button from "../components/Button.astro";
         <section>
             <Nav />
         </section> 
+        
+        <h2>Råd kompent</h2>
+      <section>
+        <Raad
+        nummer="RÅD #1"
+        overskrift="KROPPEN ER EN SLADREHANK"
+        uddybende="Det er vigtigt at lytte til kroppens signaler og tilpasse træningspasene efter behov for at minimere risikoen for overbelastning og skader. Ved at være opmærksom på de signaler, kroppen sender, kan man justere træningsprogrammet, selvom man tidligere havde en fastlagt plan. Det er en måde at opretholde en sund træningsrutine på, samtidig med at man forstår og respekterer kroppens behov."
+        citat="“Jeg har aldrig været fan af alt for fastlagte træningsprogrammer”"
+        />
+
+        
+        
+      </section>
+
+       <h2>Knap komponent</h2>
+       <section>
+       <div class="knap">
+		<Button href="/" variant="primary">LÆG I KURV</Button>
+		<Button href="/" variant="secondary">LÆG I KURV</Button>
+		</div>
+        </section>
 
 
+        <h2>Footer komponent</h2>
+		<Footer></Footer>
        
         </main>
 
@@ -76,8 +101,14 @@ import Button from "../components/Button.astro";
            margin:64px auto;
            gap: 32px;
         }
-
-
+ .knap {
+	display:flex;
+	gap: 16px;
+	padding-bottom: var(--spacingLg);
+}
+section {
+    padding: 32px;
+}
 
     
 </style> 

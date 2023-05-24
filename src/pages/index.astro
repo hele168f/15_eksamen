@@ -27,8 +27,11 @@ import Footer from "../components/Footer.astro" ;
 		produktbeskrivelse="T-shirt"
 		pris="DKK 199,-"
 		/>
+
+		<div class="knap">
 		<Button href="/" variant="primary">LÆG I KURV</Button>
 		<Button href="/" variant="secondary">LÆG I KURV</Button>
+		</div>
 		<Footer></Footer>
        </main>
 	
@@ -37,5 +40,9 @@ import Footer from "../components/Footer.astro" ;
 </html>
 
 <style>
-
+.knap {
+	display:flex;
+	gap: 16px;
+	padding-bottom: var(--spacingLg);
+}
 </style>
