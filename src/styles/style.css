@@ -177,3 +177,14 @@ main {
 header {
   margin-inline: 10%;
 }
+
+
+.card_komponent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ width:100%;
+ max-width:1000px;
+ margin-block: auto;
+margin-inline: var(--spacing-xl);
+ gap: var(--spacing-lg)
+}
