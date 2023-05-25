@@ -5,6 +5,7 @@ import Nav from "../components/Nav.astro" ;
 import Card from "../components/Card.astro" ;
 import Button from "../components/Button.astro" ;
 import Footer from "../components/Footer.astro" ;
+import Tilmeld from "../components/Tilmeld.astro" ;
 
 ---
 
@@ -82,12 +83,12 @@ import Footer from "../components/Footer.astro" ;
 			<div class="container_billeder">
 				<div class="picture">
 				  <img src="https://helenaadelaide.dk/kea/15_eksamen/photos/forside_maend.jpg" alt="First Picture">
-				  <a class="cta-button" href="#">SHOP MÆND</a>
+				  <a class="cta-button" href="/maend">SHOP MÆND</a>
 				</div>
 				
 				<div class="picture">
 				  <img src="https://helenaadelaide.dk/kea/15_eksamen/photos/forside_kvinder.jpg" alt="Second Picture">
-				  <a class="cta-button" href="#">SHOP KVINDER</a>
+				  <a class="cta-button" href="/kvinder">SHOP KVINDER</a>
 				</div>
 			  </div>
 
@@ -170,6 +171,8 @@ import Footer from "../components/Footer.astro" ;
 					<Button href="/soldat" variant="secondary">LÆS MERE</Button>
 				</div>
 			  </section>
+
+			  <Tilmeld />
 
 			  
 
