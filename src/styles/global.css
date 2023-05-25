@@ -234,6 +234,9 @@
   --openSansTextLgParagraphIndent: 0px;
   --openSansTextLgTextCase: none;
   --openSansTextLgTextDecoration: none;
+  --anonymousProTextLgFontSize: 20px;
+  --anonymousProTextLgFontFamily: Anonymous Pro;
+  --anonymousProTextLgFontWeight: 400;
   --anonymousProTextXlFontFamily: Anonymous Pro;
   --anonymousProTextXlFontWeight: 700;
   --anonymousProTextXlLineHeight: AUTO;

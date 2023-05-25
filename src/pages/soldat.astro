@@ -1,152 +1,150 @@
 ---
-import"../styles/style.css";
-import"../styles/global.css";
-import Nav from "../components/Nav.astro" ;
-import Footer from "../components/Footer.astro" ;
-import Raad from "../components/Raad.astro" ;
+import "../styles/style.css";
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import Raad from "../components/Raad.astro";
 import Grit from "../components/Grit.astro";
+import Grid1 from "../components/Grid1.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
-
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Black+Ops+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-		<title>Birke 1972</title>
-	</head>
-	<body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Black+Ops+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Birke 1972</title>
+  </head>
+  <body>
     <header>
-			<Nav> 
-				<div class="navbar">
-					<div class="navbar-logo">
-					  <a href="/"> <img src="logo.webp" > </a>
-					
-					</div>
-					<ul>
-					  <li>
-						<a href="/nyheder">NYHEDER</a>
-					  </li>
-					  <li>
-						<a href="/maend" >MÆND</a>
-					  </li>
-					  <li>
-						<a href="/kvinder" >KVINDER</a>
-					  </li>
-					  <li>
-						<a href="/accessories">ACCESSORIES</a>
-					  </li>
-					
-					  <li class="dropdown">
-						<span><a href="/om" class="active">OM BIRKE</a></span>
-						<div class="dropdown-content">
-							<a href="/soldat" >JÆGERSOLDAT</a>
-						</div>
-					  </li>
-					  <div class="navbar-icons">
-					  <img src="search.png" alt="Søg" onclick="handleSearcgClick()">
-					  <img src="heart.png" alt="Hjerte" onclick="handleHeartClick()">
-					  <img src="cart.png" alt="Kurv" onclick="handleCartClick()">
-					</div>
-					</ul>
-					
-					<div class="navbar-burger">&#9776;</div>
-				</div>
-			</Nav>
-		</header>
-		<main>
-		<Nav />
-    <Breadcrumb>
-			<div id="breadcrumb" >
-				<ul>
-				<li><a href="/index">Forside</a></li>
-				<li><a href="/om">Om Birke</a></li>
-        <li><a href="/">Jægersoldatens anbefalinger</a></li>
-			</ul>
-			</div>
-		
-		</Breadcrumb>
+      <Nav>
+        <div class="navbar">
+          <div class="navbar-logo">
+            <a href="/"> <img src="logo.webp" /></a>
+          </div>
+          <ul>
+            <li>
+              <a href="/nyheder">NYHEDER</a>
+            </li>
+            <li>
+              <a href="/maend">MÆND</a>
+            </li>
+            <li>
+              <a href="/kvinder">KVINDER</a>
+            </li>
+            <li>
+              <a href="/accessories">ACCESSORIES</a>
+            </li>
 
-		 <section class="top">
-			<h1>JÆGERSOLDATENS ANBEFALINGER</h1>
-			 <img src="fald.svg" alt="faldskam">
-		 </section>
-     <div class="vertical-line"></div>
-		<section>
-        <Raad
-        nummer="RÅD #1"
-        overskrift="KROPPEN ER EN SLADREHANK"
-        uddybende="Det er vigtigt at lytte til kroppens signaler og tilpasse træningspasene efter behov for at minimere risikoen for overbelastning og skader. Ved at være opmærksom på de signaler, kroppen sender, kan man justere træningsprogrammet, selvom man tidligere havde en fastlagt plan. Det er en måde at opretholde en sund træningsrutine på, samtidig med at man forstår og respekterer kroppens behov."
-        citat="“Jeg har aldrig været fan af alt for fastlagte træningsprogrammer”"
-        />
-      </section>
-	  <section>
-        <Raad
-        nummer="RÅD #2"
-        overskrift="SIMPEL OG VARIERET TRÆNING"
-        uddybende="Variation i træningen, både inden for løbetræning og på tværs af forskellige idrætsgrene, har været afgørende for mine bedste resultater og minimering af træningstræthed og skader. Ved at inkludere forskellige former for træning som orienteringsløb, cykling, styrketræning, svømning og march med tung rygsæk, opnåede jeg optimale resultater. Selvom alderen påvirker min præstationsevne, har jeg opdaget, at ved at variere mellem forskellige former for løb og fysisk træning opretholder jeg motivationen og minimerer smerterne fra et langt liv med fysisk udfoldelse. Uanset din favorit idrætsgren bør du kombinere den med andre typer træning for at opbygge en stærk og alsidig krop samt minimere risikoen for skader."
-        citat="“Variation i træningen har været afgørende for mine bedste resultater, minimering af træningstræthed og opretholdelse af motivationen.”"
-        />
-      </section>
-	  <section>
-        <Raad
-        nummer="RÅD #3"
-        overskrift="DET DER FUNGERER GODT FOR MIG, DUER IKKE NØDVENDIGVIS FOR ALLE"
-        uddybende="At tage hensyn til ens egen situation er afgørende for resultatet og effekten af træningen. Forskelle i genetik, arbejde, privatliv, bopæl og træningsalder gør det svært at finde to mennesker med helt ens forudsætninger. Man bør ikke være bange for at prøve noget nyt eller eksperimentere med metoder, der har været succesfulde for andre. Det er ved at prøve noget nyt, man opdager, om ens nuværende tilgang giver de bedste resultater, eller om tilføjelse af nye elementer som bakketræning eller MTB-ture kan forbedre ens præstation. Hvis man fortsætter med at gøre det samme som altid, vil tingene sandsynligvis forblive som de altid har været, men det er ikke altid det bedste."
-        citat=" “At tage udgangspunkt i ens egen situation er afgørende for resultatet og effekten af træningen, og det er vigtigt at eksperimentere og prøve nye tilgange for at opnå forbedringer.”"
-        />
-      </section>
-	  <h2>Jægersoldatens anmeldelse</h2>
-	  <section> 
-		<Grit
-		title="JÆGERSOLDAT GENNEM 35 ÅR ANMELDER BRIKE"
-		tekst="”Fysisk træning i almindelighed og løb i særdeleshed har nærmest været en passion for mig, siden jeg som 17 årig startede i forsvaret. Jeg har over årene dyrket alt fra militær femkamp, triatlon og landevejsløb fra 5.000 m til maraton, cross country, orienteringsløb, trailløb og OCR. Jeg styrke- og løbetræner stadig ca. hver anden dag, og deltager fra tid til anden i diverse motionsløb og events.”"
-		tekst="“Jeg har i egenskab af bl.a. formand for Jægerkorpsets idrætsforening i mere end ét årti haft fornøjelse af, at samarbejde med Per Vorbeck om idrætsbeklædning til kvalitetsbevidste brugere siden 2014, og Birkes nye produkter lever fuldt ud op til mine forventninger og tidligere leverede produkter - både hvad angår design, funktionalitet og komfort. Min oplevelse af de enkelte produkter er helt i tråd med præsentationen af dem på Birkes hjemmeside.”"
-		/>
-	  </section>
-     <section> 
-		<Grit
-		title=" TRÆNINGSRÅD FRA EN JÆGERSOLDAT."
-		tekst="”Carsten Møller har været jægersoldat siden 1987, og er tidligere ansvarlig for den fysiske træning i korpset samt formand for Jægerkorpsets idrætsforening igennem et årti."
-		tekst="Carsten har været dedikeret løber i mere end 40 år, hvilket kombineret med hans erfaringer fra specialstyrkerne har givet ham en del viden om, hvordan man opbygger kroppen til, at kunne klare et højt belastningsniveau over lang tid - uden at få skader.NU deler han nogle af sine tanker og personlige erfaringer med træning gennem et langt, aktivt liv i et udfordrende og krævende miljø."
-		/>
-	  </section>
+            <li class="dropdown">
+              <span><a href="/om" class="active">OM BIRKE</a></span>
+              <div class="dropdown-content">
+                <a href="/soldat">JÆGERSOLDAT</a>
+              </div>
+            </li>
+            <div class="navbar-icons">
+              <img src="search.png" alt="Søg" onclick="handleSearcgClick()" />
+              <img src="heart.png" alt="Hjerte" onclick="handleHeartClick()" />
+              <img src="cart.png" alt="Kurv" onclick="handleCartClick()" />
+            </div>
+          </ul>
 
-		<Footer />
-		</main>
-	</body>
+          <div class="navbar-burger">&#9776;</div>
+        </div>
+      </Nav>
+    </header>
+    <main>
+      <Nav />
+      <Breadcrumb>
+        <div id="breadcrumb">
+          <ul>
+            <li><a href="/index">Forside</a></li>
+            <li><a href="/om">Om Birke</a></li>
+            <li><a href="/">Jægersoldatens anbefalinger</a></li>
+          </ul>
+        </div>
+      </Breadcrumb>
+
+      <section class="top">
+        <h1>JÆGERSOLDATENS ANBEFALINGER</h1>
+        <img src="fald.svg" alt="faldskam" />
+      </section>
+      <div class="vertical-line"></div>
+      <section>
+        <Raad
+          nummer="RÅD #1"
+          overskrift="KROPPEN ER EN SLADREHANK"
+          uddybende="Det er vigtigt at lytte til kroppens signaler og tilpasse træningspasene efter behov for at minimere risikoen for overbelastning og skader. Ved at være opmærksom på de signaler, kroppen sender, kan man justere træningsprogrammet, selvom man tidligere havde en fastlagt plan. Det er en måde at opretholde en sund træningsrutine på, samtidig med at man forstår og respekterer kroppens behov."
+          citat="“Jeg har aldrig været fan af alt for fastlagte træningsprogrammer”"
+        />
+      </section>
+      <section>
+        <Raad
+          nummer="RÅD #2"
+          overskrift="SIMPEL OG VARIERET TRÆNING"
+          uddybende="Variation i træningen, både inden for løbetræning og på tværs af forskellige idrætsgrene, har været afgørende for mine bedste resultater og minimering af træningstræthed og skader. Ved at inkludere forskellige former for træning som orienteringsløb, cykling, styrketræning, svømning og march med tung rygsæk, opnåede jeg optimale resultater. Selvom alderen påvirker min præstationsevne, har jeg opdaget, at ved at variere mellem forskellige former for løb og fysisk træning opretholder jeg motivationen og minimerer smerterne fra et langt liv med fysisk udfoldelse. Uanset din favorit idrætsgren bør du kombinere den med andre typer træning for at opbygge en stærk og alsidig krop samt minimere risikoen for skader."
+          citat="“Variation i træningen har været afgørende for mine bedste resultater, minimering af træningstræthed og opretholdelse af motivationen.”"
+        />
+      </section>
+      <section>
+        <Raad
+          nummer="RÅD #3"
+          overskrift="DET DER FUNGERER GODT FOR MIG, DUER IKKE NØDVENDIGVIS FOR ALLE"
+          uddybende="At tage hensyn til ens egen situation er afgørende for resultatet og effekten af træningen. Forskelle i genetik, arbejde, privatliv, bopæl og træningsalder gør det svært at finde to mennesker med helt ens forudsætninger. Man bør ikke være bange for at prøve noget nyt eller eksperimentere med metoder, der har været succesfulde for andre. Det er ved at prøve noget nyt, man opdager, om ens nuværende tilgang giver de bedste resultater, eller om tilføjelse af nye elementer som bakketræning eller MTB-ture kan forbedre ens præstation. Hvis man fortsætter med at gøre det samme som altid, vil tingene sandsynligvis forblive som de altid har været, men det er ikke altid det bedste."
+          citat=" “At tage udgangspunkt i ens egen situation er afgørende for resultatet og effekten af træningen, og det er vigtigt at eksperimentere og prøve nye tilgange for at opnå forbedringer.”"
+        />
+      </section>
+      <h2>Jægersoldatens anmeldelse</h2>
+      <section>
+        <Grit
+          title="JÆGERSOLDAT GENNEM 35 ÅR ANMELDER BRIKE"
+          tekst="”Fysisk træning i almindelighed og løb i særdeleshed har nærmest været en passion for mig, siden jeg som 17 årig startede i forsvaret. Jeg har over årene dyrket alt fra militær femkamp, triatlon og landevejsløb fra 5.000 m til maraton, cross country, orienteringsløb, trailløb og OCR. Jeg styrke- og løbetræner stadig ca. hver anden dag, og deltager fra tid til anden i diverse motionsløb og events.” Jeg har i egenskab af bl.a. formand for Jægerkorpsets idrætsforening i mere end ét årti haft fornøjelse af, at samarbejde med Per Vorbeck om idrætsbeklædning til kvalitetsbevidste brugere siden 2014, og Birkes nye produkter lever fuldt ud op til mine forventninger og tidligere leverede produkter - både hvad angår design, funktionalitet og komfort. Min oplevelse af de enkelte produkter er helt i tråd med præsentationen af dem på Birkes hjemmeside."
+        />
+      </section>
+      <section>
+        <Grid1
+          title=" TRÆNINGSRÅD FRA EN JÆGERSOLDAT"
+          tekst="”Carsten Møller har været jægersoldat siden 1987, og er tidligere ansvarlig for den fysiske træning i korpset samt formand for Jægerkorpsets idrætsforening igennem et årti. Carsten har været dedikeret løber i mere end 40 år, hvilket kombineret med hans erfaringer fra specialstyrkerne har givet ham en del viden om, hvordan man opbygger kroppen til, at kunne klare et højt belastningsniveau over lang tid - uden at få skader.NU deler han nogle af sine tanker og personlige erfaringer med træning gennem et langt, aktivt liv i et udfordrende og krævende miljø"
+          imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/files/BIRKE_0003_1080x.jpg?v=1665055551"
+        />
+      </section>
+
+      <Footer />
+    </main>
+  </body>
 </html>
 
-<style> 
-
-section {
-  margin-top: var(--spacingXl);
-  margin-bottom: var(--spacingXl);
-}
-.top {
-	display: grid;
-	grid-template-rows: auto;
-	justify-items: center; 
+<style>
+  section {
+    margin-top: var(--spacingXl);
+    margin-bottom: var(--spacingXl);
+  }
+  .top {
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
     align-items: center;
-	margin-bottom:var(--spacingLg);
-	
-}
-h2{
-	 font-family: var(--blackOpsOneText6xlFontFamily);
+    margin-bottom: var(--spacingLg);
+  }
+  h2 {
+    font-family: var(--blackOpsOneText6xlFontFamily);
     font-size: var(--blackOpsOneText6xlFontSize);
     padding-bottom: var(--spacingSm);
     color: var(--yellowGul300);
-   text-align: center;
-	
-}
+    text-align: center;
+  }
   img {
     max-width: 100%;
-    animation: swing 3s ease-in-out infinite alternate, scale 3s ease-in-out infinite alternate;
+    animation: swing 3s ease-in-out infinite alternate,
+      scale 3s ease-in-out infinite alternate;
     transform-origin: center;
     margin-top: 32px;
   }
@@ -164,18 +162,14 @@ h2{
   }
 
   .vertical-line {
-  position: absolute;
-  top: 128%;
-  left: 50%;
-  width: 5px; /* Adjust this value to set the width of the line */
-  height: 220%; /* Adjust this value to set the height of the line */
-  background-color: orange;
-  transform: translateX(-50%);
-  z-index: -1;
-  width: 40px;
-}
-
-  
-  
+    position: absolute;
+    top: 128%;
+    left: 50%;
+    width: 5px; /* Adjust this value to set the width of the line */
+    height: 220%; /* Adjust this value to set the height of the line */
+    background-color: orange;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 40px;
+  }
 </style>
-
