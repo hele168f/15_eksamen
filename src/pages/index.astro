@@ -5,6 +5,7 @@ import Nav from "../components/Nav.astro" ;
 import Card from "../components/Card.astro" ;
 import Button from "../components/Button.astro" ;
 import Footer from "../components/Footer.astro" ;
+
 ---
 
 <html lang="en">
@@ -158,6 +159,20 @@ import Footer from "../components/Footer.astro" ;
 				</div>
 			  </section>
 
+			  <section class="indslag">
+				<div class="pop">
+					<img src="https://helenaadelaide.dk/kea/15_eksamen/photos/forside_maend.jpg" alt="First Picture">
+				</div>
+				<div class="pop_2">
+					<h2>BIRKE OG JÆGERKORPSET</h2>
+					<p>Jægersoldat siden 1987 og tidligere ansvarlig for den fysiske træning i korpset gennem et årti, har teset BIRKE's produkter
+					</p>
+					<Button href="/soldat" variant="secondary">LÆS MERE</Button>
+				</div>
+			  </section>
+
+			  
+
 			  
 			
 				
@@ -182,6 +197,56 @@ import Footer from "../components/Footer.astro" ;
 </html>
 
 <style>
+	.indslag {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+	  gap: var(--spaceCardInlineXl)
+    }
+    
+    .pop {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+	.pop_2 {
+      width: 100%;
+      margin-bottom: 20px;
+	  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+    
+   
+    
+    @media (min-width: 900px) {
+      .indslag {
+        flex-wrap: nowrap;
+      }
+      
+      .pop {
+        width: 50%;
+        margin-bottom: 0;
+      }
+
+	  .pop_2 {
+        width: 50%;
+        margin-bottom: 0;
+      }
+      
+      .pop:nth-child(1) {
+        order: -1;
+      }
+    }
 .knap {
 	display:flex;
 	gap: 16px;
@@ -242,4 +307,6 @@ import Footer from "../components/Footer.astro" ;
         max-width: fit-content;
         text-decoration: none;
     }
+
+
 </style>
