@@ -1,0 +1,44 @@
+---
+const { nummer, overskrift, uddybende, citat } = Astro.props;
+---
+
+<article class="jægerraad">
+  <div>
+    <h4>{citat}</h4>
+  </div>
+  <div>
+    <h2>{nummer}</h2>
+    <h3>{overskrift}</h3>
+    <p>{uddybende}</p>
+  </div>
+</article>
+
+<style>
+  h2 {
+    font-family: var(--blackOpsOneText6xlFontFamily);
+    font-size: var(--blackOpsOneText6xlFontSize);
+    padding-bottom: var(--spacingMd);
+    color: var(--yellowGul300);
+  }
+  h3 {
+    font-family: var(--anonymousProText2xlFontFamily);
+    font-size: var(--anonymousProText2xlFontSize);
+    padding-bottom: var(--spacingMd);
+  }
+  p {
+    font-family: var(--openSansTextBaseFontFamily);
+    font-size: var(--openSansTextBaseFontSize);
+    max-width: 64vh;
+  }
+  h4 {
+    font-family: var(--anonymousProTextLgFontFamily);
+    font-size: var(--anonymousProTextLgFontSize);
+  }
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 128px;
+    justify-items: center;
+    align-items: center;
+  }
+</style>
