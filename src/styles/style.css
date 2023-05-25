@@ -9,9 +9,9 @@ font-family: 'Open Sans', sans-serif; */
 }
 
 body {
-  background-color: var(--bgPrimary);
-  color: var(--textPrimary);
-  font-family: "Open Sans", sans-serif;
+  background-color: var(--Bg-Primary);
+  color: var( --Primary-Text-Primary);
+  font-family:  var(--fontFamiliesFontSans);
 }
 main {
   margin-inline: 10%;
@@ -25,14 +25,16 @@ main {
 
 #breadcrumb li {
   display: inline;
-  font-size: 12.8px;
+  font-size: var(--Font-size-Body-Breadcrumb);
   text-decoration: none;
 
 }
 
 #breadcrumb li a {
   text-decoration: none;
-  color:white;
+  color:var( --Primary-Text-Primary);
+  font-size: 12.8px;
+
 }
 
 #breadcrumb li:not(:last-child):after {
@@ -45,8 +47,8 @@ main {
 
 /* Skriftstørrelser */
 h1{
-	font-family: var(--blackOpsOneText6xlFontFamily);
-	font-size: 40px;
+	font-family: var(--fontFamiliesFontDisplay);
+	font-size: var(--fontSize3xl);
 
 }
 
@@ -55,13 +57,14 @@ h1{
 
 /* Navigationsmenuen */
 .navbar {
-  background-color: black;
-  color: white;
+  background-color: var(--Bg-Primary);
+  color: var( --Primary-Text-Primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-block: 16px; 
   padding-inline: 0px !important;
+  
 }
 
 .navbar-logo {
@@ -83,7 +86,10 @@ h1{
 
 .navbar ul li a {
   text-decoration: none;
-  color: var(--primaryHvid)
+  color: var(--primaryHvid);
+  font-family:var(--fontFamiliesFontMono);
+  font-weight: bold;
+  
 }
 
 .navbar ul li:hover {
@@ -98,7 +104,7 @@ h1{
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: black;
+  background-color: var(--black);
   min-width: 200px;
   padding: 10px;
   color: white;

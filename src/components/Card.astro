@@ -13,7 +13,7 @@ const {produktbeskrivelse, pris, imgPath} = Astro.props;
     .card {
       border-radius: 5px;
       font-family: var(--fontFamiliesFontMono);
-      font-size: 1rem;
+      font-size: var(--fontSize-lg);
       cursor: pointer;
       
     }
@@ -29,7 +29,6 @@ const {produktbeskrivelse, pris, imgPath} = Astro.props;
     }
 
     .card p {
-      font-weight: bold;
       margin-top: var(--spaceCardStackSm);
       margin-bottom: var(--spaceCardStackMd);
     }
