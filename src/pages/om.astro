@@ -1,78 +1,121 @@
 ---
-import"../styles/style.css";
-import"../styles/global.css";
-import Nav from "../components/Nav.astro" ;
-import Card from "../components/Card.astro" ;
+import "../styles/style.css";
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Grit from "../components/Grit.astro";
+import Grid1 from "../components/Grid1.astro";
 import Footer from "../components/Footer.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Black+Ops+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-		<title>Birke 1972</title>
-	</head>
-	<body>
-		<header>
-			<Nav> 
-				<div class="navbar">
-					<div class="navbar-logo">
-					  <a href="/"> <img src="logo.webp" > </a>
-					
-					</div>
-					<ul>
-					  <li>
-						<a href="/nyheder">NYHEDER</a>
-					  </li>
-					  <li>
-						<a href="/maend" >MÆND</a>
-					  </li>
-					  <li>
-						<a href="/kvinder" >KVINDER</a>
-					  </li>
-					  <li>
-						<a href="/accessories">ACCESSORIES</a>
-					  </li>
-					
-					  <li class="dropdown">
-						<span><a href="/om" class="active">OM BIRKE</a></span>
-						<div class="dropdown-content">
-							<a href="/soldat">JÆGERSOLDAT</a>
-						</div>
-					  </li>
-					  <div class="navbar-icons">
-					  <img src="search.png" alt="Søg" onclick="handleSearcgClick()">
-					  <img src="heart.png" alt="Hjerte" onclick="handleHeartClick()">
-					  <img src="cart.png" alt="Kurv" onclick="handleCartClick()">
-					</div>
-					</ul>
-					
-					<div class="navbar-burger">&#9776;</div>
-				</div>
-			</Nav>
-		</header>
-		<main>
-			<Nav />
-			<Breadcrumb>
-				<div id="breadcrumb" >
-					<ul>
-					<li><a href="/">Forside</a></li>
-					<li><a href="/om">Om Birke</a></li>
-					
-				</ul>
-				</div>
-				
-			</Breadcrumb>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Black+Ops+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Birke 1972</title>
+  </head>
+  <body>
+    <header>
+      <Nav>
+        <div class="navbar">
+          <div class="navbar-logo">
+            <a href="/"> <img src="logo.webp" /></a>
+          </div>
+          <ul>
+            <li>
+              <a href="/nyheder">NYHEDER</a>
+            </li>
+            <li>
+              <a href="/maend">MÆND</a>
+            </li>
+            <li>
+              <a href="/kvinder">KVINDER</a>
+            </li>
+            <li>
+              <a href="/accessories">ACCESSORIES</a>
+            </li>
 
-			<Footer />
-		</main>
-		
-		
-	</body>
+            <li class="dropdown">
+              <span><a href="/om" class="active">OM BIRKE</a></span>
+              <div class="dropdown-content">
+                <a href="/soldat">JÆGERSOLDAT</a>
+              </div>
+            </li>
+            <div class="navbar-icons">
+              <img src="search.png" alt="Søg" onclick="handleSearcgClick()" />
+              <img src="heart.png" alt="Hjerte" onclick="handleHeartClick()" />
+              <img src="cart.png" alt="Kurv" onclick="handleCartClick()" />
+            </div>
+          </ul>
+
+          <div class="navbar-burger">&#9776;</div>
+        </div>
+      </Nav>
+    </header>
+    <main>
+      <Nav />
+      <Breadcrumb>
+        <div id="breadcrumb">
+          <ul>
+            <li><a href="/">Forside</a></li>
+            <li><a href="/om">Om Birke</a></li>
+          </ul>
+        </div>
+      </Breadcrumb>
+      <section>
+        <h2>1972</h2>
+        <Grit
+          title="BIRKE GRUNDLAGT AF KRISTEN BIRKE I 1972"
+          tekst="Træningstøjet var på daværende tidspunkt lavet af bomuld, men Kirsten syede en løbeanorak og et par lange bukser af stofrester fra soveposer. Det var noget helt nyt og banebrydende, fordi soveposematerialet havde en lang række funktionelle fordele frem for bomuld - når fokus var rettet mod præstationsfremmende tøj. Derfor fik Jægersoldaten B.S. Christiansen, der på det tidspunkt var på landsholdet i Militær Femkamp, også øjnene op for det nye træningstøj, som han bragte ind i Jægerkorpset i 1973, hvorfra det hurtigt bredte sig til Frømandskorpset og andre specialstyrker."
+          imgPath="https://loststudios.dk/billeder/IMG_4397.jpg"
+        />
+      </section>
+      <section>
+        <Grid1
+          title="ET SÆRLIGT BÅND TIL SPECIALSTYRKERNE"
+          tekst="BIRKE og medlemmer af de danske specialstyrker har en lang fælles historie, fordi de få udvalgte, som har bestået optagelsesforløbet til de to korps, i mange år brugte en særlig udgave af BIRKE anorakken. Derfor er den for mange af medlemmerne også blevet en del af kulturen i korpsene, og den forbindes ofte med optagelsen i det særlige broderskab, som de i flere år har kæmpet for og forberedt sig på, at blive en del af. Faktisk var ønsket om, at bruge BIRKE og selv medvirke til at udvikle træningstøjet så stærk, at medlemmerne købte tøjet via personaleforeningerne i de to enheder, hvad også er tilfældet i dag. På den måde kan de nemlig få udviklet og designet det træningstøj, der passer nøjagtigt til dem - og BIRKE kan fortsætte med, at bidrage til at styrke interne fælles bånd og kultur."
+          imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/files/Small_Birke_3D_Shield_Logo_7216113f-1bd5-4f9d-ad1c-695e7d93d30a_x120@2x.png?v=1678526878"
+        />
+      </section>
+      <section>
+        <h2>1996</h2>
+        <Grit
+          title="“DET VAR NOGLE AF DE FEDESTE MÅNEDER I MIT LIV”.."
+          tekst="I 1996 var Nicolai Bergmann i Patruljedelingen, som blev trænet af Jægerkorpset gennem en periode på 10 måneder. Nicolai har delt sin historie med os, og vi har lånt hans BIRKE anorak fra dengang, som blev designet og produceret specielt til Patruljedelingen. Patruljedelingen bestod af 4 patruljer, hvis medlemmer alle var værnepligtige, som selv havde søgt om, at aftjene deres værnepligt i denne særlige enhed. Hver patrulje bestod af en patruljefører, en spejder, en sprængningsmand, en radiomand og en sanitetsmand. Enheden blev uddannet af jægersoldater, og uddannelsen omfattede bl.a. både kampsvømning og faldskærmsudspring."
+          imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/files/fullsizeoutput_91_1080x.jpg?v=1673528559"
+        />
+      </section>
+      <section>
+        <h2>2022</h2>
+        <Grid1
+          title="LANGERING TIL CIVIL BEFOLKING"
+          tekst="Vi har udviklet en række nye produkter, der er eksklusivt designet til specialstyrkerne, og som samtidigt danner grundlag for, at BIRKE kan bringes ud til en bredere del af befolkningen.."
+          imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/06.10_per3378_1800x1800.jpg?v=1625047634"
+        />
+      </section>
+      <h2>VELKOMMEN TIL BIRKE.</h2>
+
+      <Footer />
+    </main>
+  </body>
 </html>
+<style>
+  h2 {
+    font-family: var(--blackOpsOneText6xlFontFamily);
+    font-size: var(--blackOpsOneText6xlFontSize);
+    padding-bottom: var(--spacingMd);
+    color: var(--yellowGul300);
+  }
+  section {
+    margin-top: var(--spacingXl);
+    margin-bottom: var(--spacingXl);
+  }
+</style>
