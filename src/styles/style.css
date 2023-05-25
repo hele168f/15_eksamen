@@ -84,6 +84,7 @@ h1{
   margin-left: var(--spaceCardInlineLg);
 }
 
+
 .navbar ul li a {
   text-decoration: none;
   color: var(--primaryHvid);
@@ -107,7 +108,10 @@ h1{
   background-color: var(--black);
   min-width: 200px;
   padding: 10px;
-  color: white;
+}
+
+.dropdown-content a:hover {
+  color: var(--Action-Primary)
 }
 
 .dropdown:hover .dropdown-content {
