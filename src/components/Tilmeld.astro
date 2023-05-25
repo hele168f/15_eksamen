@@ -6,7 +6,7 @@ import Button from "../components/Button.astro" ;
         <h4>BLIV EN DEL AF HOLDET</h4>
         <p>Følg med, der hvor det sker.</p>
       <div class="buttons">
-        <input type="email" id="email" placeholder="Email" />
+        <input type="email" id="email" placeholder="Din E-mail" />
       <Button href="/" variant="primary" id="submit">TILMELD</Button>
       </div>
       
@@ -14,17 +14,23 @@ import Button from "../components/Button.astro" ;
   </div>
 
 <style>
+
+    
 .buttons {
     display: flex;
+    margin-top: 32px;
 }
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: solid var(--yellowGul300);
 }
 h4 {
     font-family: var(--anonymousProText2xlFontFamily);
     font-size: var(--fontSize-lg);
+    margin-bottom: 8px;
+    margin-top: 32px;
 }
 
 .form {

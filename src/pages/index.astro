@@ -64,7 +64,7 @@ import Tilmeld from "../components/Tilmeld.astro" ;
 
 				
 		<main>
-			<div>
+			<div class="splash">
 				<svg width="100%" height="9" viewBox="0 0 1280 9" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 				<rect width="1300" height="8.51697" fill="url(#pattern0)"/>
 				<defs>
@@ -80,6 +80,7 @@ import Tilmeld from "../components/Tilmeld.astro" ;
 			</div>
 			
 			</div>
+
 			<div class="container_billeder">
 				<div class="picture">
 				  <img src="https://helenaadelaide.dk/kea/15_eksamen/photos/forside_maend.jpg" alt="First Picture">
@@ -119,7 +120,10 @@ import Tilmeld from "../components/Tilmeld.astro" ;
 				<h2>DET SIGER VORES KUNDER</h2>
 				<div class="card_komponent">
 					<div>
-						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In facilis quod soluta? Eum incidunt eligendi at repellat, exercitationem dolore. Cum.</p>
+						<p class="anmeldelse">En trøje der er hvad de skriver den er.
+							Perfekt til det kolde træningsrum i garagen.
+							Super kvalitet.
+							Det er ikke sidste gang jeg køber dette mærke igen..</p>
 
 						<svg width="122" height="25" viewBox="0 0 122 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M12.9431 0L15.6636 8.37293H24.4675L17.345 13.5477L20.0656 21.9206L12.9431 16.7459L5.82066 21.9206L8.5412 13.5477L1.41875 8.37293H10.2226L12.9431 0Z" fill="#F39C12"/>
@@ -132,7 +136,7 @@ import Tilmeld from "../components/Tilmeld.astro" ;
 					</div>
 
 					<div>
-						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In facilis quod soluta? Eum incidunt eligendi at repellat, exercitationem dolore. Cum.</p>
+						<p class="anmeldelse">Bestilte i XL, hvilket passer fint, men til den stramme side over ryggen og skuldrene. Jeg er 186 høj og vejer 91kg. - Ellers jeg jeg meget tilfreds med produktet. Super kvalitet, fede detaljer, vindtæt og samtidig ventilerende!</p>
 
 						<svg width="122" height="25" viewBox="0 0 122 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M12.9431 0L15.6636 8.37293H24.4675L17.345 13.5477L20.0656 21.9206L12.9431 16.7459L5.82066 21.9206L8.5412 13.5477L1.41875 8.37293H10.2226L12.9431 0Z" fill="#F39C12"/>
@@ -145,7 +149,7 @@ import Tilmeld from "../components/Tilmeld.astro" ;
 					</div>
 
 					<div>
-						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In facilis quod soluta? Eum incidunt eligendi at repellat, exercitationem dolore. Cum.</p>
+						<p class="anmeldelse">Jeg var lidt i tvivl om jeg skulle købe den, med det har jeg virkelig ikke fortrudt. Den er lækker at løbe i og transporterer sveden godt! Jeg købte en størrelse xl som passer fint. Så go ahead og køb den! :-)</p>
 
 						<svg width="122" height="25" viewBox="0 0 122 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M12.9431 0L15.6636 8.37293H24.4675L17.345 13.5477L20.0656 21.9206L12.9431 16.7459L5.82066 21.9206L8.5412 13.5477L1.41875 8.37293H10.2226L12.9431 0Z" fill="#F39C12"/>
@@ -200,13 +204,30 @@ import Tilmeld from "../components/Tilmeld.astro" ;
 </html>
 
 <style>
+
+	h2 {
+		font-family: var(--anonymousProText2xlFontFamily);
+		font-weight: bold;
+		font-size: var(--fontSize-2xl);
+	}
+	.anmeldelse {
+		margin-bottom: 8px;
+	}
+	.card_komponent{
+		margin-top: 32px;
+		margin-bottom: 64px;
+	}
+	.splash {
+		margin-bottom: 32px;
+	}
 	.indslag {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       padding: 20px;
-	  gap: var(--spaceCardInlineXl)
+	  gap: var(--spaceCardInlineXl);
+	  margin-bottom: 64px;
     }
     
     .pop {
@@ -223,6 +244,12 @@ import Tilmeld from "../components/Tilmeld.astro" ;
   text-align: center;
   height: 100%;
     }
+	.pop_2 h2 {
+		margin-bottom: 8px;
+	}
+	.pop_2 p {
+		margin-bottom: 32px;
+	}
     
     img {
       width: 100%;
@@ -276,6 +303,7 @@ import Tilmeld from "../components/Tilmeld.astro" ;
       display: flex;
       justify-content: center;
       align-items: center;
+	  margin-bottom: 64px;
     }
     
     .picture {
