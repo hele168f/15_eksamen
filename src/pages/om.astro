@@ -70,6 +70,16 @@ import Breadcrumb from "../components/Breadcrumb.astro";
           </ul>
         </div>
       </Breadcrumb>
+      <section class="hero">
+        <video
+          src="https://loststudios.dk/billeder/Ny_logo.MP4"
+          controls
+          autoplay
+          width="1037"
+          loop
+        >
+        </video>
+      </section>
       <section>
         <h2>1972</h2>
         <Grit
@@ -113,9 +123,13 @@ import Breadcrumb from "../components/Breadcrumb.astro";
     font-size: var(--blackOpsOneText6xlFontSize);
     padding-bottom: var(--spacingMd);
     color: var(--yellowGul300);
+    text-align: center;
   }
   section {
     margin-top: var(--spacingXl);
     margin-bottom: var(--spacingXl);
+  }
+  .hero {
+    margin-top: -16px;
   }
 </style>
