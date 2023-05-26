@@ -77,7 +77,6 @@ import Breadcrumb from "../components/Breadcrumb.astro";
         <h1>JÆGERSOLDATENS ANBEFALINGER</h1>
         <img class="fladskam" src="fald.svg" alt="faldskam" />
       </section>
-      <div class="vertical-line"></div>
       <section>
         <Raad
           nummer="RÅD #1"
@@ -249,18 +248,6 @@ import Breadcrumb from "../components/Breadcrumb.astro";
       50% {
         transform: rotateZ(-10deg) scale(1);
       }
-    }
-
-    .vertical-line {
-      position: absolute;
-      top: 128%;
-      left: 50%;
-      width: 5px; /* Adjust this value to set the width of the line */
-      height: 220%; /* Adjust this value to set the height of the line */
-      background-color: orange;
-      transform: translateX(-50%);
-      z-index: -1;
-      width: 40px;
     }
   </style>
 </html>
