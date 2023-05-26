@@ -234,6 +234,26 @@ import Breadcrumb from "../components/Breadcrumb.astro";
       margin-bottom: var(--spacingMd);
       margin-top: var(--spacingMd);
     }
+    @media (max-width: 768px) {
+      .stars {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: left;
+      }
+
+      @media (max-width: 768px) {
+        h2,
+        h1 {
+          font-size: var(--blackOpsOneTextXlFontSize);
+        }
+      }
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+
     .fladskam {
       max-width: 100%;
       animation: swing 3s ease-in-out alternate, scale 3s ease-in-out alternate;

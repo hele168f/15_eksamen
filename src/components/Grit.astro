@@ -30,4 +30,15 @@ const { title, tekst, imgPath } = Astro.props;
     font-size: var(--openSansTextBaseFontSize);
     max-width: 64vh;
   }
+  @media (max-width: 768px) {
+    article {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      text-align: left;
+    }
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
 </style>
