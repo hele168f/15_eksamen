@@ -2,12 +2,16 @@
 const {produktbeskrivelse, pris} = Astro.props;
 import Card from "../components/Card.astro" ;
 import Button from "../components/Button.astro";
+import Nav from "../components/Nav.astro";
 ---
 
 <section >
   <div class="container">
     <div class="grid_1">
     <img src="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/3FA13A23-AB0F-4CC5-8F23-AEFA08817564_1_105_ccopy_720x.jpg?v=1679658089" alt="Produkt_Billede" width="400">
+    <img src="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/groenback_540x.jpg?v=1679658089" alt="Produkt_Billede" width="400">
+    <img src="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE4407copy_900x.jpg?v=1679658089" alt="Produkt_Billede" width="400">
+   
   </div>
   <div class="grid_2">
     <div>
@@ -42,10 +46,11 @@ import Button from "../components/Button.astro";
     </div>
   
     <div class="buttons">
-      <Button href="/" variant="primary">LÆG I KURV</Button>
-      <button class="heart-button"><img src="heartyellow.png" width="25px" alt=""></button>
+      <Button class="basket" href="#" variant="primary">LÆG I KURV</Button>
+      <button class="heart-button" id="toggler">
+        <img src="heartyellow.png" width="25px" alt="">
+      </button>
     </div>
-  
     <div class="infos">
       <div class="info">
         <p> ✔ 30 DAGES RETURRET</p>
@@ -70,23 +75,49 @@ import Button from "../components/Button.astro";
     <div class="dropdowns">
       <h4 class="dropdown-title">Detaljer og pasning<span class="arrow-down">&#9662;</span></h4>
       <div class="dropdown-content-1">
-        <p>Krafla takes its name from one of Iceland's most powerful volcanoes. This elegant long-length vest is designed to provide added warmth for those who battle the elements in their everyday commute. Boxy fit silhouette with a clean and simple design. Lightweight recycled down insulation with 700 fill power ensures enduring warmth without adding any bulk. The outer shell is made from 100% recycled fibers, colored with natural dyes. Two zipped front pockets and one inner zipped chest pocket. Male model is 189 cm / 6' 2" tall and wearing size M/L.</p>
+        <div class="dropdown-content-flex">
+          <img src="/public/feather.png" alt="" height="33px" width="33px">
+          <h5 class="centered">LETVÆGT</h5>
+        </div>
+        <p>Det tynde men også stærke stof giver en dejlig let og luftig shorts.</p>
+
+
+        <div class="dropdown-content-flex">
+          <img src="/public/size.png" alt="" height="33px" width="33px">
+          <h5>EKSTREMT STRÆKBARE</h5>
+        </div>
+        <p>Materialet har en unik stræk evne og kan strækkes op til dobbelt størrelse, så de følger med garanti kroppen uanset hvilke øvelser du laver uden de falder ned.</p>
+
+
+        <div class="dropdown-content-flex">
+          <img src="/public/breathe.png" alt="" height="40px" width="40px">
+          <h5>ÅNDBAR</h5>
+        </div>
+        <p>Stoffet er strikket hvilket giver en utrolig god åndbarhed. Enhver form for fugt eller sved forsvinder med det samme.</p>
       </div>
+      
     </div>
-  
-    <div>
-      <div class="anmeldelser">
-        <p>Anmeldelser (33)</p>
-        <svg width="122" height="25" viewBox="0 0 122 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+    <div class="dropdowns">
+      <h4 class="dropdown-title">Anmeldelser (33) <span class="arrow-down">&#9662;</span></h4>
+      <div class="dropdown-content-1">
+        <div class="based">
+          <div class="based_1">
+           <h3>4,8</h3>
+          <p>baseret på 33 anmeldelser</p> 
+          </div>
+          <div>
+            <svg width="122" height="25" viewBox="0 0 122 25" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12.9431 0L15.6636 8.37293H24.4675L17.345 13.5477L20.0656 21.9206L12.9431 16.7459L5.82066 21.9206L8.5412 13.5477L1.41875 8.37293H10.2226L12.9431 0Z" fill="#F39C12"/>
           <path d="M37.178 0L39.8985 8.37293H48.7023L41.5799 13.5477L44.3004 21.9206L37.178 16.7459L30.0555 21.9206L32.7761 13.5477L25.6536 8.37293H34.4574L37.178 0Z" fill="#F39C12"/>
           <path d="M61.4128 0L64.1334 8.37293H72.9372L65.8147 13.5477L68.5353 21.9206L61.4128 16.7459L54.2904 21.9206L57.0109 13.5477L49.8885 8.37293H58.6923L61.4128 0Z" fill="#F39C12"/>
           <path d="M85.6477 0L88.3682 8.37293H97.1721L90.0496 13.5477L92.7701 21.9206L85.6477 16.7459L78.5253 21.9206L81.2458 13.5477L74.1233 8.37293H82.9272L85.6477 0Z" fill="#F39C12"/>
           <path d="M109.883 0L112.603 8.37293H121.407L114.284 13.5477L117.005 21.9206L109.883 16.7459L102.76 21.9206L105.481 13.5477L98.3582 8.37293H107.162L109.883 0Z" fill="#F39C12"/>
           </svg>
-          
-      </div>
-      <div class="anmeldelser_scale">
+          </div>
+        </div>
+        
+           <div class="anmeldelser_scale">
         <svg width="455" height="102" viewBox="0 0 455 102" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M7.35938 6.90137C7.35938 7.40137 7.25781 7.87012 7.05469 8.30762C6.85156 8.74512 6.57552 9.12793 6.22656 9.45605C5.88281 9.77897 5.48438 10.0342 5.03125 10.2217C4.57812 10.4092 4.10156 10.5029 3.60156 10.5029C3.11198 10.5029 2.65885 10.43 2.24219 10.2842C1.82552 10.1383 1.45833 9.93001 1.14062 9.65918C0.828125 9.38835 0.575521 9.05501 0.382812 8.65918C0.190104 8.26335 0.0729167 7.81022 0.03125 7.2998L1.57031 7.07324C1.6224 7.66178 1.8125 8.13835 2.14062 8.50293C2.47396 8.8623 2.96094 9.04199 3.60156 9.04199C3.92969 9.04199 4.22135 8.9873 4.47656 8.87793C4.73698 8.76335 4.95573 8.6097 5.13281 8.41699C5.3151 8.22428 5.45312 7.99772 5.54688 7.7373C5.64583 7.47689 5.69531 7.19824 5.69531 6.90137C5.69531 6.21908 5.51823 5.68783 5.16406 5.30762C4.8151 4.92741 4.35156 4.7373 3.77344 4.7373C3.40365 4.7373 3.0599 4.81543 2.74219 4.97168C2.42969 5.12793 2.18229 5.38053 2 5.72949H0.382812V0.12793H6.76562V1.58887H2V4.22949C2.47917 3.59928 3.17708 3.28418 4.09375 3.28418C4.53125 3.28418 4.94792 3.37012 5.34375 3.54199C5.73958 3.70866 6.08594 3.94824 6.38281 4.26074C6.67969 4.56803 6.91667 4.94564 7.09375 5.39355C7.27083 5.84147 7.35938 6.34408 7.35938 6.90137Z" fill="white"/>
           <path d="M7.28125 33.4041H2.38281V31.9509H4.01562V30.6853H0V29.2244L3.72656 23.2087H5.61719V29.2244H7.28125V30.6853H5.61719V31.9509H7.28125V33.4041ZM4.01562 29.2244V25.115L1.45312 29.2244H4.01562Z" fill="white"/>
@@ -103,10 +134,11 @@ import Button from "../components/Button.astro";
           <rect x="30.0049" y="73.49" width="84.2449" height="5.7702" fill="#F39C12"/>
           <rect x="30.0049" y="94.2627" width="424.687" height="5.7702" fill="#D9D9D9"/>
           </svg>
-          
+          <Button href="/" variant="primary">LÆS ALLE ANMELDELSER</Button>
           
       </div>
-      <Button href="/" variant="primary">LÆS ALLE ANMELDELSER</Button>
+      </div>
+     
     </div>
   <div>
   </div>
@@ -140,6 +172,102 @@ import Button from "../components/Button.astro";
 
 
 <style>
+.quantity-container {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid var(--Action-Primary);
+    padding: 8px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .quantity-container button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 1px 10px;
+    font-size: 25px;
+    line-height: 1;
+  }
+
+  .quantity-container input {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    text-align: center;
+    width: 30px;
+    font-size: 16px;
+    line-height: 1;
+  }
+.basket {
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s;
+  }
+
+  .basket.clicked {
+    background-color: #000;
+    color: #fff;
+  }
+
+.heart-button img {
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s;
+  }
+
+  .heart-button img:focus {
+    transform: scale(1.6);
+  }
+
+  .heart-button img:active {
+    transform: scale(0.3);
+  }
+  .size-button.active {
+    background-color: var(--Action-Primary);
+    color: var(--Bg-Primary);
+  }
+
+.based_1 {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 8px;
+  margin-bottom: 16px
+}
+.based {
+  display: flex;
+  justify-content: space-between;
+}
+
+.based h3 {
+  text-align: center;
+}
+.based p {
+  margin-bottom: 0px !important;
+}
+.grid_1 {
+  width: 400px;
+  height: auto;
+}
+
+  .dropdown-content-flex {
+    display: flex;
+  align-items: center;
+  height: 100%; /* Make sure the parent has a height set */
+  gap: 8px;
+  margin-bottom: 16px;
+  }
+
+  .dropdown-content-flex h5{
+   font-size: 16px;
+  }
+
+  .centered {
+    text-align: center;
+  }
   .buttons {
     display: flex;
     gap: 8px;
@@ -177,6 +305,11 @@ import Button from "../components/Button.astro";
   width: 100%;
     max-width: 1000px;
     margin: 64px auto;
+}
+.grid_2 {
+  position: sticky;
+  top:20px;
+  height: 100%;
 }
 
 
@@ -296,6 +429,10 @@ import Button from "../components/Button.astro";
  
 }
 
+.dropdown-content-1 svg {
+  margin-bottom: 16px;
+}
+
 .dropdown-content-1 p {
   margin-bottom: 32px;
 }
@@ -337,6 +474,7 @@ import Button from "../components/Button.astro";
 </style>
 
 <script>
+
   // Tilføj eventlyttere til plus- og minus-knapper
 const minusButton = document.querySelector('.minus-button');
 const plusButton = document.querySelector('.plus-button');
@@ -371,6 +509,27 @@ function toggleDropdowns() {
 const dropdowns = this.closest('.dropdowns');
 dropdowns.classList.toggle('active');
 }
+
+
+
+
+  // Get all size buttons
+  const sizeButtons = document.querySelectorAll('.size-button');
+
+  // Function to handle button click
+  function handleButtonClick() {
+    // Remove 'active' class from all buttons
+    sizeButtons.forEach(button => button.classList.remove('active'));
+
+    // Add 'active' class to the clicked button
+    this.classList.add('active');
+  }
+
+  // Attach click event listeners to each size button
+  sizeButtons.forEach(button => button.addEventListener('click', handleButtonClick));
+
+
+
 </script>
 
 
