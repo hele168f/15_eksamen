@@ -9,6 +9,7 @@ import Footer from "../components/Footer.astro" ;
 import Raad from "../components/Raad.astro" ;
 import Grit from "../components/Grit.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
+import Tilmeld from "../components/Tilmeld.astro";
 ---
 <html lang="en">
 	<head>
@@ -23,43 +24,47 @@ import Breadcrumb from "../components/Breadcrumb.astro";
 	</head>
 	<body>
         <main>
-        <h2>Breadcrumb Component</h2>
-        <div>
-            <Breadcrumb />
-        </div>
+            <section>
+                <h1>KOMPONENTBIBLIOTEK</h1>
+            </section>
 
-        
-        <h2>Card Component</h2>
+            <section>
+                <h2>Card Komponent</h2>
 
         <div class="card_komponent">
            <Card 
+           imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE4393_720x.jpg?v=1675419471"
             produktbeskrivelse="T-SHIRT MED MILITÆR PRINT"
             pris="DKK 199,-"
 		    /> 
 
             <Card 
+            imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/sortinfiltrator06.10_per3472_4fab460d-3f8a-4b42-864a-ddfe58c04ebd_720x.jpg?v=1675425937"
             produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
             pris="DKK 495,-"
 		    /> 
             
             <Card 
+            imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/3FA13A23-AB0F-4CC5-8F23-AEFA08817564_1_105_c_360x.jpg?v=1675419218"
             produktbeskrivelse="LØBESHORTS"
             pris="DKK 395,-"
 		    /> 
         </div>
+            </section>
+        
 
-         <h2>Single view komponent</h2>
+        
+        
+
+        
         <section>
+             <h2>Single-view komponent</h2>
             <Singleview />
         </section> 
-
-        <h2>Navigation komponent</h2>
-        <section>
-            <Nav />
-        </section> 
         
-        <h2>Råd kompent</h2>
+        
       <section>
+        <h2>Råd (grid) komponent</h2>
         <Raad
         nummer="RÅD #1"
         overskrift="KROPPEN ER EN SLADREHANK"
@@ -77,23 +82,29 @@ import Breadcrumb from "../components/Breadcrumb.astro";
         img
 
         />
-
-    
       </section>
 
-     <h2>Knap komponent</h2>
-     <section>
-     <div class="knap">
+      <section>
+         <h2>Knap komponent</h2>
+         <div class="knap">
 	 <Button href="/" variant="primary">LÆG I KURV</Button>
 	 <Button href="/" variant="secondary">LÆG I KURV</Button>
 	 </div>
+      </section>
+
+    
+     <section>
+     <h2>Tilmeld nyhedsbrev komponent</h2>
+     <Tilmeld/>
      </section>
 
-
-        <h2>Footer komponent</h2>
+     <section>
+         <h2>Footer komponent</h2>
 		<Footer></Footer>
-       
+     </section>
+
         </main>
+
 
         
 		
@@ -126,7 +137,15 @@ import Breadcrumb from "../components/Breadcrumb.astro";
 }
 section {
     padding: 32px;
+    margin-top: 64px;
+    text-align: center;
 }
 
+
+@media (max-width: 768px) {
+  section h1 {
+    font-size: 25px !important;
+  }
+}
     
 </style> 
