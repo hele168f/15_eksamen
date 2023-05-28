@@ -182,12 +182,94 @@ import Tilmeld from "../components/Tilmeld.astro" ;
 	
 		<Footer></Footer>
        </main>
-	
+	   <div id="cookie-consent" class="cookie-wrapper">
+		<div class="container-cookie">
+		  <p class="text">
+			Vi bruger cookies til at forbedre din oplevelse på vores website.
+			<a href="#" class="underline">Cookiepolitik</a>
+			<a href="#" class="underline">Indstillinger</a>
+		  </p>
+		  <div class="button-group">
+			<button id="cookie-deny" class="deny-button">Afvis alle</button>
+			<button id="cookie-accept" class="accept-button">Accepter</button>
+		  </div>
+		</div>
+	  </div>
 		
 	</body>
 </html>
 
 <style>
+	#cookie-consent {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 12px;
+}
+
+.cookie-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-cookie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.text {
+  font-size: 0.875rem;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.text a {
+  color: #fff;
+  text-decoration: underline;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+.deny-button,
+.accept-button {
+  font-size: 0.875rem;
+  font-weight: medium;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.deny-button {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  margin-right: 8px;
+}
+
+.deny-button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.accept-button {
+  color: #333;
+  background-color: #fff;
+}
+
+.accept-button:hover {
+  background-color: #ccc;
+}
+
 .card_komponent_2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -427,3 +509,17 @@ section {
 
 
 </style>
+
+<script>
+	  const cookieConsent = document.querySelector('#cookie-consent');
+  const cookieAcceptButton = document.querySelector('#cookie-accept');
+  const cookieDenyButton = document.querySelector('#cookie-deny');
+
+  cookieAcceptButton.addEventListener('click', () => {
+    cookieConsent.remove();
+  });
+
+  cookieDenyButton.addEventListener('click', () => {
+    cookieConsent.remove();
+  });
+</script>
