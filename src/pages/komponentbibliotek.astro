@@ -1,151 +1,181 @@
 ---
-import"../styles/style.css";
-import"../styles/global.css";
-import Nav from "../components/Nav.astro" ;
-import Card from "../components/Card.astro" ;
+import "../styles/style.css";
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Card from "../components/Card.astro";
 import Singleview from "../components/Singleview.astro";
 import Button from "../components/Button.astro";
-import Footer from "../components/Footer.astro" ;
-import Raad from "../components/Raad.astro" ;
+import Footer from "../components/Footer.astro";
+import Raad from "../components/Raad.astro";
 import Grit from "../components/Grit.astro";
 import Breadcrumb from "../components/Breadcrumb.astro";
 import Tilmeld from "../components/Tilmeld.astro";
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Black+Ops+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-		<title>Birke 1972</title>
-	</head>
-	<body>
-        <main>
-            <section>
-                <h1>KOMPONENTBIBLIOTEK</h1>
-            </section>
 
-            <section>
-                <h2>Card Komponent</h2>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Black+Ops+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Birke 1972</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>KOMPONENTBIBLIOTEK</h1>
+      </section>
+
+      <section>
+        <h2>Card Komponent</h2>
 
         <div class="card_komponent">
-           <Card 
-           imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE4393_720x.jpg?v=1675419471"
+          <Card
+            imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/BIRKE4393_720x.jpg?v=1675419471"
             produktbeskrivelse="T-SHIRT MED MILITÆR PRINT"
             pris="DKK 199,-"
-		    /> 
+          />
 
-            <Card 
+          <Card
             imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/sortinfiltrator06.10_per3472_4fab460d-3f8a-4b42-864a-ddfe58c04ebd_720x.jpg?v=1675425937"
             produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
             pris="DKK 495,-"
-		    /> 
-            
-            <Card 
+          />
+
+          <Card
             imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/3FA13A23-AB0F-4CC5-8F23-AEFA08817564_1_105_c_360x.jpg?v=1675419218"
             produktbeskrivelse="LØBESHORTS"
             pris="DKK 395,-"
-		    /> 
+          />
         </div>
+      </section>
+
+      <section>
+        <h2>Single-view komponent</h2>
+        <Singleview />
+      </section>
+
+      <html lang="en">
+        <head>
+          <meta charset="utf-8" />
+          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+          <meta name="viewport" content="width=device-width" />
+          <meta name="generator" content={Astro.generator} />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Black+Ops+One&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+            rel="stylesheet"
+          />
+          <title>Birke 1972</title>
+        </head>
+        <body>
+          <main>
+            <h2>Breadcrumb Component</h2>
+            <div>
+              <Breadcrumb />
+            </div>
+
+            <h2>Card Component</h2>
+
+            <div class="card_komponent">
+              <Card
+                produktbeskrivelse="T-SHIRT MED MILITÆR PRINT"
+                pris="DKK 199,-"
+              />
+
+              <Card
+                produktbeskrivelse="JOGGINGBUKSER MED STRETCH"
+                pris="DKK 495,-"
+              />
+
+              <Card produktbeskrivelse="LØBESHORTS" pris="DKK 395,-" />
+            </div>
+
+            <h2>Single view komponent</h2>
+            <section>
+              <Singleview />
             </section>
-        
 
-        
-        
+            <h2>Navigation komponent</h2>
+            <section>
+              <Nav />
+            </section>
 
-        
-        <section>
-             <h2>Single-view komponent</h2>
-            <Singleview />
-        </section> 
-        
-        
-      <section>
-        <h2>Råd (grid) komponent</h2>
-        <Raad
-        nummer="RÅD #1"
-        overskrift="KROPPEN ER EN SLADREHANK"
-        uddybende="Det er vigtigt at lytte til kroppens signaler og tilpasse træningspasene efter behov for at minimere risikoen for overbelastning og skader. Ved at være opmærksom på de signaler, kroppen sender, kan man justere træningsprogrammet, selvom man tidligere havde en fastlagt plan. Det er en måde at opretholde en sund træningsrutine på, samtidig med at man forstår og respekterer kroppens behov."
-        citat="“Jeg har aldrig været fan af alt for fastlagte træningsprogrammer”"
-        />
+            <h2>Råd kompent</h2>
+            <section>
+              <h2>Råd (grid) komponent</h2>
+              <Raad
+                nummer="RÅD #1"
+                overskrift="KROPPEN ER EN SLADREHANK"
+                uddybende="Det er vigtigt at lytte til kroppens signaler og tilpasse træningspasene efter behov for at minimere risikoen for overbelastning og skader. Ved at være opmærksom på de signaler, kroppen sender, kan man justere træningsprogrammet, selvom man tidligere havde en fastlagt plan. Det er en måde at opretholde en sund træningsrutine på, samtidig med at man forstår og respekterer kroppens behov."
+                citat="“Jeg har aldrig været fan af alt for fastlagte træningsprogrammer”"
+              />
+            </section>
 
-      </section>
+            <section>
+              <Grit
+                title="JÆGERSOLDAT GENNEM 35 ÅR ANMELDER BRIKE"
+                tekst="”Fysisk træning i almindelighed og løb i særdeleshed har nærmest været en passion for mig, siden jeg som 17 årig startede i forsvaret. Jeg har over årene dyrket alt fra militær femkamp, triatlon og landevejsløb fra 5.000 m til maraton, cross country, orienteringsløb, trailløb og OCR. Jeg styrke- og løbetræner stadig ca. hver anden dag, og deltager fra tid til anden i diverse motionsløb og events.”"
+                tekst="“Jeg har i egenskab af bl.a. formand for Jægerkorpsets idrætsforening i mere end ét årti haft fornøjelse af, at samarbejde med Per Vorbeck om idrætsbeklædning til kvalitetsbevidste brugere siden 2014, og Birkes nye produkter lever fuldt ud op til mine forventninger og tidligere leverede produkter - både hvad angår design, funktionalitet og komfort. Min oplevelse af de enkelte produkter er helt i tråd med præsentationen af dem på Birkes hjemmeside.”"
+                img
+              />
+            </section>
 
-      <section>
-        <Grit
-        title="JÆGERSOLDAT GENNEM 35 ÅR ANMELDER BRIKE"
-        tekst="”Fysisk træning i almindelighed og løb i særdeleshed har nærmest været en passion for mig, siden jeg som 17 årig startede i forsvaret. Jeg har over årene dyrket alt fra militær femkamp, triatlon og landevejsløb fra 5.000 m til maraton, cross country, orienteringsløb, trailløb og OCR. Jeg styrke- og løbetræner stadig ca. hver anden dag, og deltager fra tid til anden i diverse motionsløb og events.”"
-        tekst="“Jeg har i egenskab af bl.a. formand for Jægerkorpsets idrætsforening i mere end ét årti haft fornøjelse af, at samarbejde med Per Vorbeck om idrætsbeklædning til kvalitetsbevidste brugere siden 2014, og Birkes nye produkter lever fuldt ud op til mine forventninger og tidligere leverede produkter - både hvad angår design, funktionalitet og komfort. Min oplevelse af de enkelte produkter er helt i tråd med præsentationen af dem på Birkes hjemmeside.”"
-        img
+            <h2>Knap komponent</h2>
+            <section>
+              <div class="knap">
+                <Button href="/" variant="primary">LÆG I KURV</Button>
+                <Button href="/" variant="secondary">LÆG I KURV</Button>
+                <Button hreg="/" variant="tricondary">LÆG I KURV</Button>
+              </div>
+            </section>
 
-        />
-      </section>
+            <h2>Footer komponent</h2>
+            <Footer />
+          </main>
+        </body>
+      </html>
 
-      <section>
-         <h2>Knap komponent</h2>
-         <div class="knap">
-	 <Button href="/" variant="primary">LÆG I KURV</Button>
-	 <Button href="/" variant="secondary">LÆG I KURV</Button>
-	 </div>
-      </section>
-
-    
-     <section>
-     <h2>Tilmeld nyhedsbrev komponent</h2>
-     <Tilmeld/>
-     </section>
-
-     <section>
-         <h2>Footer komponent</h2>
-		<Footer></Footer>
-     </section>
-
-        </main>
-
-
-        
-		
-		
-		
-	</body>
-</html>
-
-<style>
-    main {
-    margin-inline: 10%;
-}
-
-    h2 {
-        place-self: center;
-    }
-    
-    .card_komponent {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-           width:100%;
-           max-width:1000px;
-           margin:64px auto;
-           gap: 32px;
+      <style>
+        main {
+          margin-inline: 10%;
         }
- .knap {
-	display:flex;
-	gap: 16px;
-	padding-bottom: var(--spacingLg);
-}
-section {
-    padding: 32px;
-    margin-top: 64px;
-    text-align: center;
-}
 
+        h2 {
+          place-self: center;
+        }
 
-@media (max-width: 768px) {
-  section h1 {
-    font-size: 25px !important;
-  }
-}
-    
-</style> 
+        .card_komponent {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          width: 100%;
+          max-width: 1000px;
+          margin: 64px auto;
+          gap: 32px;
+        }
+        .knap {
+          display: flex;
+          gap: 16px;
+          padding-bottom: var(--spacingLg);
+        }
+        section {
+          padding: 32px;
+          margin-top: 64px;
+          text-align: center;
+        }
+
+        @media (max-width: 768px) {
+          section h1 {
+            font-size: 25px !important;
+          }
+        }
+      </style>
+    </main></body>
+</html>
