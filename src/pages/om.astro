@@ -80,6 +80,9 @@ import Breadcrumb from "../components/Breadcrumb.astro";
         >
         </video>
       </section>
+      <sectionn class="pic">
+        <img src="/ompic.png" alt="billede" />
+      </sectionn>
       <section>
         <h2>1972</h2>
         <Grit
@@ -131,5 +134,15 @@ import Breadcrumb from "../components/Breadcrumb.astro";
   }
   .hero {
     margin-top: -16px;
+  }
+  @media (max-width: 1000px) {
+    video {
+      display: none;
+    }
+  }
+  @media (min-width: 1000px) {
+    .pic {
+      display: none;
+    }
   }
 </style>
