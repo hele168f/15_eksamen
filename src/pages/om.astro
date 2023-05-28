@@ -73,16 +73,17 @@ import Breadcrumb from "../components/Breadcrumb.astro";
       <section class="hero">
         <video
           src="https://loststudios.dk/billeder/Ny_logo.MP4"
-          controls
           autoplay
-          width="1037"
+          width="1050"
           loop
         >
         </video>
       </section>
-      <sectionn class="pic">
-        <img src="/ompic.png" alt="billede" />
-      </sectionn>
+      <section class="pic">
+        <div class="pic-container">
+          <img src="/om.png" alt="billede" width="300px" height="533px" />
+        </div>
+      </section>
       <section>
         <h2>1972</h2>
         <Grit
@@ -114,7 +115,7 @@ import Breadcrumb from "../components/Breadcrumb.astro";
           imgPath="https://cdn.shopify.com/s/files/1/0544/0926/5329/products/06.10_per3378_1800x1800.jpg?v=1625047634"
         />
       </section>
-      <h2>VELKOMMEN TIL BIRKE.</h2>
+      <h2 class="velkom">VELKOMMEN TIL BIRKE.</h2>
 
       <Footer />
     </main>
@@ -129,8 +130,8 @@ import Breadcrumb from "../components/Breadcrumb.astro";
     text-align: center;
   }
   section {
-    margin-top: var(--spacingXl);
-    margin-bottom: var(--spacingXl);
+    margin-top: var(--spacing2xl);
+    margin-bottom: var(--spacing2xl);
   }
   .hero {
     margin-top: -16px;
@@ -139,10 +140,36 @@ import Breadcrumb from "../components/Breadcrumb.astro";
     video {
       display: none;
     }
+    .velkom {
+      font-size: var(--blackOpsOneTextXlFontSize);
+    }
+    section {
+      margin-top: var(--spacingXl);
+      margin-bottom: var(--spacingXl);
+    }
   }
   @media (min-width: 1000px) {
     .pic {
       display: none;
+      align-items: center;
+      place-content: center;
+      justify-content: center;
     }
+  }
+  .pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .pic-container {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .pic-container img {
+    max-width: 100%;
+    height: auto;
   }
 </style>
