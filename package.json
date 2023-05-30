@@ -11,5 +11,19 @@
   },
   "dependencies": {
     "astro": "^2.4.1"
-  }
+  },
+  "build": {
+    "outDir": resolve("dist"),
+    "rollupOptions": {
+      "input": {
+        "main": resolve(__dirname, "src/index.html"),
+        "frivillig": resolve(__dirname, "src/frivillig.html"),
+        "om": resolve(__dirname, "src/om.html"),
+        "sponsorer": resolve(__dirname, "src/sponsorer.html"),
+        "billetter": resolve(__dirname, "src/billetter.html"),
+        "cookies": resolve(__dirname, "src/cookies.html"),
+        "kontakt": resolve(__dirname, "src/kontakt.html"),
+        "privatliv": resolve(__dirname, "src/privatliv.html"),
+    },
+  },
 }
